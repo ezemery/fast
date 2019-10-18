@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 import LogoWhite from '../../assets/img/logo_white.png';
-import Hamburger from '../../assets/img/hamburger.png';
+import LogoMin from '../../assets/img/logo_min.png';
 function Header() {
 	let buttonName = 'Fast Go';
+	let mobileButtonName = 'Install Fast';
+	const [top, setTop] = useState(true);
+	useEffect(() => {
+		const eventHandler = e => {
+			console.log('mouse move', e);
+			e.clientY > 0 ? setTop(false) : setTop(true);
+			setTop(false);
+		};
+		window.addEventListener('touchmove', eventHandler);
+
+		return () => {
+			window.removeEventListener('touchmove', eventHandler);
+		};
+	}, []);
 	return (
-		<div className={'header'}>
-			<div className={'header-container'}>
-				<img className={'header-logo'} src={LogoWhite} />
+		<div className={top ? 'header' : 'header white'}>
+			<div className={top ? 'header-container' : 'header-container white'}>
+				<img className={'header-logo'} src={top ? LogoWhite : LogoMin} />
 				<div className={'header-menu'}>
 					<a>How It Works</a>
 					<a>Company</a>
@@ -18,7 +32,9 @@ function Header() {
 				<div className={'header-button'}>
 					<div className="m-auto">{buttonName}</div>
 				</div>
-				<div className={'burger-button'}></div>
+				{top ? null : <div className={'header-mobile-button'}>{mobileButtonName}</div>}
+
+				<div className={top ? 'burger-button' : 'burger-button white'}></div>
 			</div>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
 import LogoWhite from '../../assets/img/logo_white.png';
+import ChatImg from '../../assets/img/chat.png';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
@@ -70,6 +71,7 @@ function Footer() {
 					<div className="subscribe-button">Subscribe</div>
 				</div>
 			</div>
+			<img src={ChatImg} className="chat-button"></img>
 		</div>
 	);
 }

@@ -55,7 +55,7 @@ function Home() {
 	const [currentCategory, setCurrentCategory] = useState('Popular');
 
 	return (
-		<div>
+		<div className="home">
 			<Header></Header>
 			<div className="section-1">
 				<div className="section-1-container">

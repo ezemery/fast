@@ -185,4 +185,14 @@
 			display: none;
 		}
 	}
+
+	.chat-button {
+		position: absolute;
+		right: 71px;
+		margin-top: 190px;
+
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
+	}
 }
