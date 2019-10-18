@@ -1,0 +1,22 @@
+.green-button {
+	background: #7cb342;
+	border-radius: 5px;
+	padding-top: 22px;
+	padding-bottom: 21px;
+	font-family: 'Graphik';
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	letter-spacing: 0.01em;
+	color: white;
+	cursor: pointer;
+
+	@media screen and (max-width: 600px) {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+.green-button:hover {
+	background: #95b970;
+}
