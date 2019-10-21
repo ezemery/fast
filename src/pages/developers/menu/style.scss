@@ -1,0 +1,52 @@
+.developers-menu {
+	background: #f9fafc;
+	border-radius: 10px;
+	width: 286px;
+	height: 444px;
+	padding: 34px 24px 31px 25px;
+
+	@media screen and (max-width: 600px) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+
+	&-heading {
+		font-family: 'Graphik';
+		font-size: 12px;
+		line-height: 120%;
+		color: #88d20f;
+		margin-bottom: 14px;
+		padding-left: 18px;
+	}
+
+	&-item {
+		padding: 8px 17px;
+		font-family: 'Graphik';
+		font-size: 14px;
+		line-height: 25px;
+		border-radius: 5px;
+		width: 100%;
+		color: #363636;
+		cursor: pointer;
+
+		span {
+			margin-left: 10px;
+		}
+
+		&.active {
+			background: #7cb342;
+			color: white;
+		}
+
+		&:hover {
+			background: #eff2f7;
+			color: #363636;
+		}
+
+		&.child {
+			margin-left: 31px;
+			width: calc(100% - 31px);
+		}
+	}
+}
