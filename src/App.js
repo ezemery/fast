@@ -7,6 +7,7 @@ import Platform from './pages/platform';
 import Faq from './pages/faq';
 import Developers from './pages/developers';
 import AboutUs from './pages/aboutus';
+import Dashboard from './pages/dashboard';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/font/graphik/style.css';
@@ -21,6 +22,7 @@ function App() {
 				<Route exact path="/developers" component={Developers} />
 				<Route exact path="/faq" component={Faq} />
 				<Route exact path="/aboutus" component={AboutUs} />
+				<Route exact path="/dashboard" component={Dashboard} />
 			</Switch>
 		</Router>
 	);
