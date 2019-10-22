@@ -89,7 +89,7 @@ function AboutUs() {
 	];
 	return (
 		<div className="aboutus-page">
-			<Header2></Header2>
+			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Setup Fast Checkout"></Header2>
 			<div className="section-1">
 				<div className="section-1-title">
 					Get to know Fast and

@@ -4,9 +4,7 @@ import Logo from '../../assets/img/logo_white.png';
 import GrayLogo from '../../assets/img/logo_gray.png';
 import LogoMin from '../../assets/img/logo_min.png';
 function Header2(props) {
-	let { type } = props;
-	let buttonName = 'Go Fast';
-	let mobileButtonName = 'Get Help';
+	let { type, buttonName, mobileButtonName } = props;
 
 	return (
 		<div

@@ -1,0 +1,112 @@
+.assets-page-content-right {
+  .colours {
+    &-heading {
+      font-family: 'Graphik';
+      font-size: 36px;
+      line-height: 50px;
+      color: #363636;
+      text-align: left;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e2e2e2;
+
+      @media screen and (max-width: 600px) {
+        font-size: 24px;
+        line-height: 50px;
+        padding-bottom: 0;
+        border: none;
+        margin-top: 74px;
+      }
+    }
+
+    &-content {
+      margin-bottom: 95px;
+    }
+
+    &-section {
+      margin-top: 40px;
+
+      @media screen and (max-width: 600px) {
+        margin-top: 10px;
+      }
+
+      &-title {
+        font-family: 'Graphik';
+        font-size: 24px;
+        line-height: 50px;
+        letter-spacing: 0.01em;
+        color: #363636;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+        }
+      }
+
+      &-desc {
+        font-family: 'Graphik';
+        font-size: 16px;
+        line-height: 25px;
+        color: #363636;
+        margin-bottom: 15px;
+        width: 312px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        background: url('../../../assets/img/logo_guideline.png') no-repeat center center;
+        background-size: 510px 158px;
+        width: 100%;
+        height: 200px;
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          background: url('../../../assets/img/logo_guideline_green.png') no-repeat center center;
+          background-size: 260px 80px;
+          width: 100%;
+          height: 120px;
+        }
+      }
+
+      &-content {
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+          display: block;
+        }
+
+        .card {
+          width: 252px;
+          background: white;
+          box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+          margin: 30px;
+
+          @media screen and (max-width: 600px) {
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          &-img {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            border-radius: 0;
+          }
+
+          &-title {
+            font-family: 'Graphik';
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            color: #6a6a6a;
+          }
+        }
+      }
+    }
+  }
+}

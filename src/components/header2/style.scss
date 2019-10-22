@@ -1,123 +1,129 @@
 .header2 {
-  height: 80px;
-  background: white;
-  color: #363636;
-  display: flex;
-  width: 100%;
-  z-index: 99;
-  position: fixed;
+	height: 80px;
+	background: white;
+	color: #363636;
+	display: flex;
+	width: 100%;
+	z-index: 99;
+	position: fixed;
 
-  &-container {
-    min-width: 1000px;
-    margin: auto;
-    display: flex;
-  }
+	&-container {
+		min-width: 1000px;
+		margin: auto;
+		display: flex;
+	}
 
-  &-logo {
-    height: 30px;
-    margin: auto;
-    cursor: pointer;
-  }
+	&-logo {
+		height: 30px;
+		margin: auto;
+		cursor: pointer;
+	}
 
-  &-menu {
-    display: flex;
-    margin: auto;
+	&-menu {
+		display: flex;
+		margin: auto;
 
-    a {
-      margin-right: 60px;
-      cursor: pointer;
-    }
+		a {
+			margin-right: 60px;
+			cursor: pointer;
+		}
 
-    a:last-child {
-      margin-right: 0;
-    }
-  }
+		a:last-child {
+			margin-right: 0;
+		}
+	}
 
-  &-button {
-    margin-left: auto;
-    width: 128px;
-    height: 48px;
-    background: #363636;
-    font-family: 'Graphik';
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    color: white;
-    border-radius: 5px;
-    border: 1px solid #363636;
-    display: flex;
-    cursor: pointer;
+	&-button {
+		margin-left: auto;
 
-    &:hover {
-      background-color: #827e7e;
-    }
+		height: 48px;
+		background: #363636;
+		font-family: 'Graphik';
+		font-size: 16px;
+		line-height: 18px;
+		text-align: center;
+		color: white;
+		border-radius: 5px;
+		border: 1px solid #363636;
+		display: flex;
+		cursor: pointer;
+		padding-left: 20px;
+		padding-right: 20px;
 
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
-  }
+		&:hover {
+      color: #363636;
+      background: white;
+		}
 
-  &-mobile-button {
-    font-family: 'Graphik';
-    font-size: 16px;
-    line-height: 18px;
-    padding: 10px;
-    background: #363636;
-    color: white;
-    border: 1px solid #363636;
-    border-radius: 5px;
-    display: none;
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
+	}
 
-    @media screen and (max-width: 600px) {
-      display: block;
-    }
-  }
+	&-mobile-button {
+		font-family: 'Graphik';
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px;
+		background: #363636;
+		color: white;
+		border: 1px solid #363636;
+		border-radius: 5px;
+		display: none;
 
-  .burger-button {
-    display: none;
-  }
+		@media screen and (max-width: 600px) {
+			display: block;
+		}
+	}
+
+	.burger-button {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .header2 {
-    &-container {
-      min-width: 320px;
-      margin-left: 28px;
-      margin-top: 28px;
-      display: flex;
-    }
+	.header2 {
+		&-container {
+			min-width: 320px;
+			margin-left: 28px;
+			margin-top: 28px;
+			display: flex;
+			width: 100%;
+			min-width: auto;
+		}
 
-    &-container-white {
-      margin-top: 28px;
-    }
+		&-container-white {
+			margin-top: 28px;
+		}
 
-    &-logo {
-      height: 30px;
-      margin: 0;
-      cursor: pointer;
-    }
+		&-logo {
+			height: 30px;
+			margin: 0;
+			cursor: pointer;
+		}
 
-    &-menu {
-      display: none;
-    }
+		&-menu {
+			display: none;
+		}
 
-    &-button {
-      display: none;
-    }
+		&-button {
+			display: none;
+		}
 
-    &-mobile-button {
-      margin-left: auto;
-      margin-top: -5px;
-    }
+		&-mobile-button {
+			margin-left: auto;
+			margin-top: -5px;
+		}
 
-    .burger-button {
-      margin-left: 20px;
-      margin-top: 5px;
-      display: block;
-      width: 30px;
-      height: 20px;
-      background: url('../../assets/img/hamburger_gray.png') no-repeat center center;
-      background-size: 100% 100%;
-    }
-  }
+		.burger-button {
+			margin-left: 20px;
+			margin-top: 5px;
+			display: block;
+			width: 30px;
+			height: 20px;
+			background: url('../../assets/img/hamburger_gray.png') no-repeat center center;
+			background-size: 100% 100%;
+			margin-right: 25px;
+		}
+	}
 }

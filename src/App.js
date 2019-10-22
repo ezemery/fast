@@ -8,6 +8,7 @@ import Faq from './pages/faq';
 import Developers from './pages/developers';
 import AboutUs from './pages/aboutus';
 import Dashboard from './pages/dashboard';
+import Assets from './pages/assets';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/font/graphik/style.css';
@@ -23,6 +24,7 @@ function App() {
 				<Route exact path="/faq" component={Faq} />
 				<Route exact path="/aboutus" component={AboutUs} />
 				<Route exact path="/dashboard" component={Dashboard} />
+				<Route exact path="/assets" component={Assets} />
 			</Switch>
 		</Router>
 	);
