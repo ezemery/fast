@@ -70,7 +70,7 @@ function Chart(props) {
 		0.7718
   ]];
   const options = {
-       credits: {
+      credits: {
         enabled: false
       },     
       chart: {

@@ -1,44 +1,88 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { LineChart } from 'react-d3-components';
+import Highcharts from 'highcharts';
+import ReactHighcharts from 'react-highcharts'
 import './style.scss';
 
 function MultiLineChart() {
-	const data = [
-		{
-			label: 'somethingA',
-			values: [
-				{ x: 0, y: 2 },
-				{ x: 1.3, y: 5 },
-				{ x: 3, y: 6 },
-				{ x: 3.5, y: 6.5 },
-				{ x: 4, y: 6 },
-				{ x: 4.5, y: 6 },
-				{ x: 5, y: 7 },
-				{ x: 5.5, y: 8 },
-			],
+	const options = {
+		credits:{
+			enabled: false
 		},
-		{
-			label: 'somethingB',
-			values: [
-				{ x: 0, y: 3 },
-				{ x: 1.3, y: 4 },
-				{ x: 3, y: 7 },
-				{ x: 3.5, y: 8 },
-				{ x: 4, y: 7 },
-				{ x: 4.5, y: 7 },
-				{ x: 5, y: 7.8 },
-				{ x: 5.5, y: 9 },
-			],
-		},
-	];
-	useEffect(() => {
-		ReactDOM.render(
-			<LineChart data={data} width={400} height={400} margin={{ top: 10, bottom: 50, left: 50, right: 10 }} />,
-			document.getElementById('line_chart')
-		);
-		return () => {};
-	}, []);
-	return <div id="line_chart"></div>;
+		title: {
+        text: ''
+    },
+
+    subtitle: {
+    },
+
+    yAxis: {
+			title: {
+					text: ''
+			},
+			labels: {
+				enabled: true
+			}
+    },
+    legend: {
+			layout: 'horizontal',
+			align: 'left',
+			verticalAlign: 'top',
+			squareSymbol: false,
+			lineHeight: 16,
+			symbolHeight: 12
+    },
+
+    plotOptions: {
+			series: {
+				label: {
+					connectorAllowed: false
+				},
+				marker: {
+					symbol: 'square',	
+					radius: 0
+				},
+				pointStart: 2010
+			}
+    },
+
+    series: [{
+			name: 'Fast Logins',
+			data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+			color: '#88D20F',
+
+    }, {
+			name: 'New customers',
+			data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434],
+			color: '#19381F',
+
+    }, {
+			name: 'Average Login frquency',
+			data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387],
+			color: '#7CB342',
+
+    }],
+
+    responsive: {
+			rules: [{
+				condition: {
+					maxWidth: 500
+				},
+				chartOptions: {
+					legend: {
+						layout: 'horizontal',
+						align: 'center',
+						verticalAlign: 'bottom'
+					}
+				}
+			}]
+		}
+	};
+
+	return <div id="line_chart">
+	<ReactHighcharts
+          config={options}
+        />
+	</div>;
 }
 export default MultiLineChart;
