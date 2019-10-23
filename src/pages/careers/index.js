@@ -111,7 +111,10 @@ function Careers() {
 						<div className="section-2-content-1-2"></div>
 					</div>
 					<div className="section-2-content-2"></div>
-					<div className="section-2-content-3"></div>
+					<div className="section-2-content-3">
+						<div className="section-2-content-3-1"></div>
+						<div className="section-2-content-3-2"></div>
+					</div>
 				</div>
 			</div>
 			<div className="section-3">

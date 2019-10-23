@@ -96,7 +96,7 @@
         width: 383px;
 
         @media screen and (max-width: 600px) {
-          width: 308px;
+          width: 100%;
         }
 
         &-1 {
@@ -104,6 +104,69 @@
           font-size: 16px;
           line-height: 25px;
           color: #696969;
+
+          @media screen and (max-width: 600px) {
+            text-align: center;
+          }
+        }
+
+        &-2 {
+          margin-top: 26px;
+          height: 292px;
+          background: url('../../assets/img/careers_back_1.png') no-repeat center center;
+          background-size: 100% 100%;
+
+          @media screen and (max-width: 600px) {
+            height: 214px;
+          }
+        }
+      }
+
+      &-2 {
+        background: url('../../assets/img/careers_back_2.png') no-repeat center center;
+        background-size: 100% 100%;
+        width: 393px;
+        margin-left: 40px;
+
+        @media screen and (max-width: 600px) {
+          height: 466px;
+          width: 100%;
+          margin-left: 0;
+          margin-top: 16px;
+        }
+      }
+
+      &-3 {
+        width: 330px;
+        margin-left: 40px;
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 26px;
+        }
+
+        &-1 {
+          background: url('../../assets/img/careers_back_1.png') no-repeat center center;
+          background-size: 100% 100%;
+          height: calc(50% - 13px);
+          width: 100%;
+
+          @media screen and (max-width: 600px) {
+            height: 214px;
+          }
+        }
+
+        &-2 {
+          margin-top: 26px;
+          background: url('../../assets/img/careers_back_1.png') no-repeat center center;
+          background-size: 100% 100%;
+          height: calc(50% - 13px);
+          width: 100%;
+
+          @media screen and (max-width: 600px) {
+            height: 214px;
+          }
         }
       }
     }
