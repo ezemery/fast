@@ -5,7 +5,12 @@ import Footer from '../../components/footer';
 
 import './style.scss';
 
-import CreativePeopleImg from '../../assets/img/amazon_back.png';
+import Team1Img from '../../assets/img/team_1.png';
+import Team2Img from '../../assets/img/team_2.png';
+import Team3Img from '../../assets/img/team_3.png';
+import Team4Img from '../../assets/img/team_4.png';
+import Team5Img from '../../assets/img/team_5.png';
+import Team6Img from '../../assets/img/team_6.png';
 function Box(props) {
 	const { title, desc } = props;
 	return (
@@ -32,42 +37,42 @@ function AboutUs() {
 		{
 			name: 'Domm Holland',
 			job: 'CEO',
-			photo: CreativePeopleImg,
+			photo: Team1Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'Hr Manager',
-			photo: CreativePeopleImg,
+			photo: Team2Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'COO',
-			photo: CreativePeopleImg,
+			photo: Team3Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'CTO',
-			photo: CreativePeopleImg,
+			photo: Team4Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'CCO',
-			photo: CreativePeopleImg,
+			photo: Team5Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'Chief of Design',
-			photo: CreativePeopleImg,
+			photo: Team4Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'CEO',
-			photo: CreativePeopleImg,
+			photo: Team6Img,
 		},
 		{
 			name: 'Domm Holland',
 			job: 'CFO',
-			photo: CreativePeopleImg,
+			photo: Team4Img,
 		},
 	];
 	const data = [
