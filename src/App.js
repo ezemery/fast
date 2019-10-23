@@ -11,6 +11,7 @@ import Dashboard from './pages/dashboard';
 import Assets from './pages/assets';
 import Shortcuts from './pages/shortcuts';
 import HowItWorks from './pages/howitworks';
+import WarRoom from './pages/warroom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/font/graphik/style.css';
@@ -29,6 +30,7 @@ function App() {
 				<Route exact path="/assets" component={Assets} />
 				<Route exact path="/shortcuts" component={Shortcuts} />
 				<Route exact path="/howitworks" component={HowItWorks} />
+				<Route exact path="/warroom" component={WarRoom} />
 			</Switch>
 		</Router>
 	);
