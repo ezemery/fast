@@ -1,0 +1,354 @@
+.howitworks-page {
+  font-family: 'Graphik';
+  @media screen and (max-width: 600px) {
+  }
+
+  .banner {
+    padding-top: 159px;
+    padding-bottom: 49px;
+    text-align: center;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 129px;
+      padding-bottom: 5px;
+    }
+
+    &-title {
+      font-size: 60px;
+      line-height: 125%;
+      text-align: center;
+      color: #19381F;
+      margin-bottom: 33px;
+
+      @media screen and (max-width: 600px) {
+        width:100%;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-desc{
+      font-size: 24px;
+      line-height: 25px;
+      text-align: center;
+      padding-bottom:24px;
+      border-bottom: 1px solid #E0E6ED;
+      color: #7CB342;
+      width: 562px;
+      margin-left: auto;
+      margin-right: auto;
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+        padding-bottom:20px;
+        width: 258px;
+      }
+    }
+  }
+
+  .section {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 54px;
+    padding-bottom: 56px;
+    height: 750px;
+
+    @media screen and (max-width: 600px) {
+      display:block;
+      height: 960px;
+    }
+    &.first{
+      @media screen and (max-width: 600px) {
+        display:block;
+        height: 900px;
+      }
+    }
+    &.lightblue{
+      background: #F9FAFC; 
+      @media screen and (max-width: 600px) {
+      height: 970px;
+    }
+    }
+    &-step{
+      margin-top: auto;
+      margin-bottom: auto;
+      @media screen and (max-width: 600px) {
+        text-align:center;
+        position: absolute;
+        margin-top: 450px;
+        &.mt0{
+          margin-top: 0;
+        }
+      }
+    }
+    &-phone{
+      width: 480px;
+      height: 650px;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        height: 490px;
+      }
+      &.first{
+        background: url('../../assets/img/how_it_works_circle_1.png') no-repeat center center;
+        background-size: 343px 343px;
+        background-position: top 0 right 0;
+        @media screen and (max-width: 600px) {
+          background-position: top 0 right -115px;
+        }
+        &:after{
+          content: '';
+          background: url('../../assets/img/how_it_works_1.png') no-repeat center center;
+          background-size: 375px 667px;
+          width: 480px;
+          height: 700px;
+          position: absolute;
+          @media screen and (max-width: 600px) {
+            background-size: 218px 438px;
+            width: 100%;
+            height:480px;
+          }
+        }
+      }
+      &.second{
+        background: url('../../assets/img/how_it_works_circle_2.png') no-repeat center center;
+        background-size: 343px 343px;
+        background-position: bottom 0 right 0;
+        @media screen and (max-width: 600px) {
+          background-position: bottom 0 right -115px;
+        }
+  
+        &:after{
+          content: '';
+          background: url('../../assets/img/how_it_works_2.png') no-repeat center center;
+          background-size: 375px 667px;
+          width: 480px;
+          height: 700px;
+          position: absolute;
+          @media screen and (max-width: 600px) {
+            background-size: 218px 438px;
+            width: 100%;
+            height:480px;
+          }
+        }
+      }
+      &.third{
+        background: url('../../assets/img/how_it_works_circle_3.png') no-repeat center center;
+        background-size: 343px 343px;
+        background-position: bottom 0 left 0;
+        @media screen and (max-width: 600px) {
+          background-position: bottom 0 left -115px;
+        }
+  
+        &:after{
+          content: '';
+          background: url('../../assets/img/how_it_works_3.png') no-repeat center center;
+          background-size: 375px 667px;
+          width: 480px;
+          height: 700px;
+          position: absolute;
+          @media screen and (max-width: 600px) {
+            background-size: 218px 438px;
+            width: 100%;
+            height:480px;
+          }
+        }
+      }
+    }
+    
+  
+   
+    .step{
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 453px;
+      text-align: left;
+      @media screen and (max-width: 600px) {
+        text-align:center;
+        width:100%;
+      }
+      &-heading{
+        font-size: 18px;
+        line-height: 57px;
+        color: #19381F;
+        @media screen and (max-width: 600px) {
+          text-align:center;
+        }
+      }
+      &-title{
+        font-size: 45px;
+        line-height: 57px;
+        color: #19381F;
+      }
+      &-desc{
+        font-size: 18px;
+        line-height: 25px;
+        color: #696969;
+        margin-top: 15px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 16px;
+          text-align:center;
+          padding-left: 26px;
+          padding-right: 26px;
+        }
+      }
+      &-button{
+        margin-top:46px;
+        background: #88D20F;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 15px 35px;
+        cursor:pointer;
+        width: fit-content;
+        &:hover{
+          background: #9bf57f;
+        }
+        @media screen and (max-width: 600px) {
+          margin-top: 15px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    &-green-circle{
+      position: absolute;
+      margin-top: -215px;
+      &.first{
+        background: #B3E266;
+        width: 215px;
+        height: 430px;
+        left: 0;
+        border-top-right-radius: 430px;
+        border-bottom-right-radius: 430px;
+        margin-top:480px;
+        @media screen and (max-width: 600px) {
+          width: 95px;
+          height: 190px;
+          left: 0;
+          margin-top: 250px;
+          border-top-right-radius: 190px;
+          border-bottom-right-radius: 190px;
+        }
+      }
+      &.second{
+        background: #B3E266;
+        width: 193px;
+        height: 385px;
+        right: 0;
+        margin-top: 480px;
+        border-top-left-radius: 385px;
+        border-bottom-left-radius: 385px;
+        @media screen and (max-width: 600px) {
+          width: 95px;
+          height: 190px;
+          right: 0;
+          margin-top: 330px;
+          border-top-left-radius: 190px;
+          border-bottom-left-radius: 190px;
+        }
+      }
+    }
+  }
+  .shop-brands{
+    background: url('../../assets/img/hero_2.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 575px;
+    display: flex;
+
+    @media screen and (max-width: 600px) {
+      background: url('../../assets/img/hero_2_mobile.png') no-repeat center center;
+      background-size: 100% 100%;    
+      height: 375px;
+      margin-bottom: 230px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, rgba(54, 54, 54, 0) 0%, rgba(54, 54, 54, 0.6) 100%);
+      width: 100%;
+      height: 575px;
+    }
+    &-panel{
+      background: #FFFFFF;
+      border-radius: 20px 0px 0px 20px;
+      padding: 56px 94px;
+      position: absolute;
+      right: 0;
+      margin-top: 65px;
+      z-index: 1;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        text-align: center;
+        padding-top: 41px;
+        position: absolute;
+        padding-left: initial;
+        padding-right: initial;
+        border-radius: 0;
+        font-size: 30px;
+        margin-top: 370px;
+      }
+      &-heading{
+        font-size: 60px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #19381F;
+        @media screen and (max-width: 600px) {
+          font-size:30px;
+        }
+      }
+      &-button{
+        background: #88D20F;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 15px;
+        cursor:pointer;
+        width:fit-content;
+        margin-top: 26px;
+        &:hover{
+          background: #9bf57f;
+        }
+        @media screen and (max-width: 600px) {
+          margin-left: auto;
+          margin-right: auto;
+          margin-top:20px;
+        }
+      }
+    }
+    &-logos{
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+      margin-bottom: 57px;
+      width: 100%;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 0px; 
+        background: transparent;
+      }
+      &-img{
+        height: 46px;
+        margin-left: 35px;
+        margin-right: 35px;
+
+        @media screen and (max-width: 600px) {
+          height: 30px;
+          margin-left: 25px;
+          margin-right: 25px;
+        }
+        img{
+          height: 100%;
+        }
+      }
+    }
+  }
+}

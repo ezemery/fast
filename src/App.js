@@ -10,6 +10,7 @@ import AboutUs from './pages/aboutus';
 import Dashboard from './pages/dashboard';
 import Assets from './pages/assets';
 import Shortcuts from './pages/shortcuts';
+import HowItWorks from './pages/howitworks';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/font/graphik/style.css';
@@ -27,6 +28,7 @@ function App() {
 				<Route exact path="/dashboard" component={Dashboard} />
 				<Route exact path="/assets" component={Assets} />
 				<Route exact path="/shortcuts" component={Shortcuts} />
+				<Route exact path="/howitworks" component={HowItWorks} />
 			</Switch>
 		</Router>
 	);
