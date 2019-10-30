@@ -26,7 +26,7 @@ function Assets() {
 	const [category, setCategory] = useState({ currentParent: 'BRAND GUIDELINES', currentChild: 'Logo' });
 	return (
 		<div className="assets-page">
-			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Setup Fast Checkout"></Header2>
+			<Header2 buttonName="Fast Go" hasSubmenu={true}></Header2>
 			<div className="assets-page-content">
 				<SideMenu {...category} onMenuClicked={state => setCategory(state)}></SideMenu>
 				<div className="assets-page-content-right">

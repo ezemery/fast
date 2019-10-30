@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
+
 
 import './style.scss';
 
@@ -12,7 +13,7 @@ function Step(props) {
 	const { heading, title, desc } = props;
 	return (
 		<div className="step">
-			<div className="d-flex">
+			<div className="step-container">
 				<div className="step-img"></div>
 				<div className="step-content">
 					<div className="step-heading">{heading}</div>
@@ -28,7 +29,7 @@ function Perk(props) {
 	return (
 		<div className="perk">
 			<div className="perk-img">
-				<img src={img}></img>
+				<img src={img} alt='perk'></img>
 			</div>
 			<div className="perk-title">{title}</div>
 			<div className="perk-desc">{desc}</div>
@@ -78,7 +79,7 @@ function Platform() {
 	];
 	return (
 		<div className="platform-page">
-			<Header2 type="gray"></Header2>
+			<Header2 type="gray" buttonName='Fast Go'></Header2>
 			<div className="section-1">
 				<div className="section-1-title">
 					Fast <span className="green">+</span> Shopify
@@ -89,6 +90,10 @@ function Platform() {
 				</div>
 				<div className="section-1-back-1"></div>
 				<div className="section-1-back-2"></div>
+				<div className="section-1-back-3"></div>
+				<div className="section-1-back-4"></div>
+				<div className="section-1-back-5"></div>
+				<div className="section-1-back-6"></div>
 			</div>
 			<div className="section-2">
 				<div className="section-2-title">

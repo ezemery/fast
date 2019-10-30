@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {FaArrowUp, FaArrowDown} from 'react-icons/fa';
 import ReactCountryFlag from "react-country-flag";
 
@@ -16,7 +16,7 @@ const CountryItem = (props) => {
   return <div className='table-item'>
         <div className='table-item-value'>{rate}%</div>
         <div className='table-item-footer'>
-          {arrow == 'up' ? <FaArrowUp size={8}/> : <FaArrowDown size={8}/>}
+          {arrow === 'up' ? <FaArrowUp size={8}/> : <FaArrowDown size={8}/>}
           
           <span>({country})</span>
             <ReactCountryFlag 
@@ -72,9 +72,10 @@ function Table(props)
 
           <div className='table-content'>
           {
-            topCountries.map((country, index)=>{
+            topCountries.map((country, index) => {
               if(index < 6)
-                return (<CountryItem key={index} {...country}/>)
+                return (<CountryItem key={index} {...country} />)
+              return null;
             })
           }
           </div>
@@ -99,7 +100,8 @@ function Table(props)
           {
             topContinents.map((continent, index)=>{
               if(index < 6)
-                return (<ContinentItem  key={index} {...continent}/>)
+                return (<ContinentItem key={index} {...continent} />)
+              return null;
             })
           }
           </div>

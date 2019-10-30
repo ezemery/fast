@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header3 from '../../components/header3';
 import LogoGray from '../../assets/img/logo_gray.png';
@@ -6,8 +6,6 @@ import Chart from './chart';
 import Table from './table';
 
 import './style.scss';
-import { Select } from 'antd';
-const { Option } = Select;
 
 function Box(props) {
 	const { users, min, secs } = props;
@@ -19,7 +17,7 @@ function Box(props) {
 			<div className='box-content'>
 				<div className='box-content-users'>
 					<div className='box-content-users-count'>{users}</div>
-					<div className='box-content-users-desc'>users logged into <div className='box-content-users-logo'><img src={LogoGray} /></div></div>
+					<div className='box-content-users-desc'>users logged into <div className='box-content-users-logo'><img src={LogoGray} alt='gray logo' /></div></div>
 				</div>
 				<div className='box-content-time'>
 					<div>One new Login every</div>

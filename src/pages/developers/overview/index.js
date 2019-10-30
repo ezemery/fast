@@ -17,12 +17,13 @@ const Section = React.forwardRef(props => {
 			</div>
 			{img ? (
 				<div className="section-img">
-					<img src={img}></img>
+					<img src={img} alt=''></img>
 				</div>
 			) : null}
 		</div>
 	);
 });
+
 function Overview(props) {
 	const { child } = props;
 	const contents = [
@@ -68,7 +69,7 @@ function Overview(props) {
 			// elRef.current.forEach(item => {
 			// 	if (item.title === 'child')
 			// });
-			debugger;
+			// debugger;
 			scrollToComponent(elRef.current[2].current, { offset: 0, align: 'middle', duration: 500, ease: 'inCirc' });
 		}
 	});

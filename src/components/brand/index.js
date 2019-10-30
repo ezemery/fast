@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Swiper from 'react-id-swiper';
 import AspectRatio from 'react-aspect-ratio';
 import 'react-aspect-ratio/aspect-ratio.css';
-import _ from 'lodash';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import 'react-id-swiper/lib/styles/css/swiper.css';
 import './style.scss';
 import HarrisFarmImg from '../../assets/img/harris_farm.png';
@@ -17,7 +14,7 @@ import AmazonBackImg from '../../assets/img/amazon_back.png';
 import FashionNovaBackImg from '../../assets/img/fashion_nova_back.png';
 
 function BrandItem(props) {
-	const { img, name, industry, backImg } = props;
+	const {  name, industry, backImg } = props;
 	return (
 		<div className={'brand-item'}>
 			<AspectRatio
@@ -40,35 +37,37 @@ function Brand(props) {
 		'Fashion Nova': { img: FashionNovaImg, backImg: FashionNovaBackImg },
 	};
 	const swiperParams = {
-		slidesPerView: 'auto',
 		spaceBetween: 0,
 		slidesPerView: 2,
 		slidesPerColumn: 2,
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.customized-swiper-pagination',
 			clickable: true,
 		},
 	};
 	return (
-		<div className="brand-panel">
-			<div className="mobile-layout">
-				<Swiper {...swiperParams}>
-					{brands.map(brand => {
-						return (
-							<div className="swiper-slide">
-								<BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
-							</div>
-						);
-					})}
-				</Swiper>
-			</div>
-			<div className="desktop-layout">
-				{brands.map(brand => {
-					return <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>;
-				})}
-			</div>
-		</div>
-	);
+    <div className="brand-panel">
+      <div className="mobile-layout">
+        <Swiper {...swiperParams}>
+          {brands.map(brand => {
+            return (
+              <div className="swiper-slide">
+                <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
+              </div>
+            );
+          })}
+        </Swiper>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div className="desktop-layout">
+        {brands.map(brand => {
+          return (
+            <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default Brand;

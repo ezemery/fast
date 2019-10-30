@@ -3,13 +3,18 @@
 	width: 100%;
 
 	@media screen and (max-width: 600px) {
-		margin-top: 30px;
+		margin-top: 50px;
 	}
 
 	.swiper-pagination-bullet-active {
 		background: #7cb342;
 	}
 
+	.customized-swiper-pagination{
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+	}
 	.swiper-slide {
 		padding: 10px;
 	}
@@ -41,7 +46,7 @@
 
 		&-industry {
 			text-align: center;
-			font-size: 10px;
+			font-size: 16px;
 			line-height: 18px;
 			color: #c8c8c8;
 		}

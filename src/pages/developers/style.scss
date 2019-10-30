@@ -1,12 +1,13 @@
 .developers-page {
-	&-content {
-		overflow: auto;
-		padding-top: 100px;
-		display: flex;
-		justify-content: center;
+  &-content {
+    overflow: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
 
-		@media screen and (max-width: 600px) {
-			display: block;
-		}
-	}
+    @media screen and (max-width: 600px) {
+      display: block;
+      padding-top: 150px;
+    }
+  }
 }

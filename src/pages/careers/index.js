@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
@@ -25,7 +25,7 @@ function Perk(props) {
 	return (
 		<div className="perk">
 			<div className="perk-img">
-				<img src={img}></img>
+				<img src={img} alt='perk'></img>
 			</div>
 			<div className="perk-title">{title}</div>
 			<div className="perk-desc">{desc}</div>
@@ -87,7 +87,7 @@ function Careers() {
 	];
 	return (
 		<div className="careers-page">
-			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Setup Fast Checkout"></Header2>
+			<Header2 buttonName="Fast Go" ></Header2>
 			<div className="section-1">
 				<div className="section-1-title">
 					We appreciate <br /> the curious and creative.

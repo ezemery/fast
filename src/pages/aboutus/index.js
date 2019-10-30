@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
@@ -25,7 +25,7 @@ function Avatar(props) {
 	return (
 		<div className="avatar">
 			<div className="avatar-img">
-				<img src={photo}></img>
+				<img src={photo} alt='avatar'></img>
 			</div>
 			<div className="avatar-name">{name}</div>
 			<div className="avatar-job">{job}</div>
@@ -94,7 +94,7 @@ function AboutUs() {
 	];
 	return (
 		<div className="aboutus-page">
-			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Setup Fast Checkout"></Header2>
+			<Header2 buttonName="Fast Go"></Header2>
 			<div className="section-1">
 				<div className="section-1-title">
 					Get to know Fast and

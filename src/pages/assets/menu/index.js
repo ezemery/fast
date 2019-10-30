@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
 
 import './style.scss';
@@ -50,6 +50,27 @@ function SideMenu(props) {
 			children: ['Templates', 'Forms', 'Illustrations', 'Videos', 'Imagery', 'Iconography'],
 		},
 	];
+		const [top, setTop] = useState(true);
+    useEffect(() => {
+      const eventHandler = e => {
+        console.log('mouse move', e);
+        window.pageYOffset > 0 ? setTop(false) : setTop(true);
+      };
+      window.addEventListener('touchmove', eventHandler);
+      return () => {
+        window.removeEventListener('touchmove', eventHandler);
+      };
+    }, []);
+    useEffect(() => {
+      const eventHandler = e => {
+        console.log('mouse move', e);
+        window.pageYOffset > 0 ? setTop(false) : setTop(true);
+      };
+      window.addEventListener('scroll', eventHandler);
+      return () => {
+        window.removeEventListener('scroll', eventHandler);
+      };
+    }, []);
 	return (
 		<React.Fragment>
 			<div className="assets-menu">
@@ -57,14 +78,14 @@ function SideMenu(props) {
 					return <SubMenu key={item.text} {...item} {...props}></SubMenu>;
 				})}
 			</div>
-			<div className="assets-menu-mobile">
+			<div className={top ? "assets-menu-mobile" : "assets-menu-mobile scroll"}>
 				<Dropdown overlay={menu}>
-					<a className="assets-menu-mobile-item" href="#">
+					<a className="assets-menu-mobile-item">
 						{currentParent} <Icon type="caret-down" />
 					</a>
 				</Dropdown>
 				<Dropdown overlay={submenu}>
-					<a className="assets-menu-mobile-item" href="#">
+					<a className="assets-menu-mobile-item" >
 						{currentChild} <Icon type="caret-down" />
 					</a>
 				</Dropdown>

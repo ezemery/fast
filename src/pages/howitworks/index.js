@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
@@ -53,7 +53,7 @@ function HowItWorks() {
 
 	return (
 		<div className="howitworks-page">
-			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Setup Fast Checkout"></Header2>
+			<Header2 buttonName="Setup Fast Checkout" setup={true}></Header2>
 			<div className="banner">
 				<div className="banner-title">
 					Here's how to shop <br /> with Fast
@@ -95,7 +95,7 @@ function HowItWorks() {
 				<div className='shop-brands-logos'>
 					{
 						brands.map(brand=>{
-							return (<div className='shop-brands-logos-img'><img src={brand} /></div>)
+							return (<div className='shop-brands-logos-img'><img src={brand} alt='brand' /></div>)
 						})
 					}
 				</div>

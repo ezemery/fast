@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { SocialIcon } from 'react-social-icons';
+import React from 'react';
 
 import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
@@ -15,7 +14,7 @@ function Card(props) {
 	return (
 		<div className="card">
 			<div className="card-img">
-				<img src={img}></img>
+				<img src={img} alt='card'></img>
 			</div>
 			<div className="card-title">{title}</div>
 			<div className="card-desc">{desc}</div>
@@ -48,7 +47,7 @@ function ContactUs() {
 	];
 	return (
 		<div className="contact-us">
-			<Header2 buttonName="Setup Fast Checkout" mobileButtonName="Get Help"></Header2>
+			<Header2 buttonName="Fast Go"></Header2>
 			<div className="section-1">Contact Us</div>
 			<div className="section-2">
 				<div className="section-2-1">You can get in touch we us easily through social media</div>
