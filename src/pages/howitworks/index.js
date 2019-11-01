@@ -53,7 +53,7 @@ function HowItWorks() {
 
 	return (
 		<div className="howitworks-page">
-			<Header2 buttonName="Setup Fast Checkout" setup={true}></Header2>
+			<Header2 buttonName="Fast Go" setup={true}></Header2>
 			<div className="banner">
 				<div className="banner-title">
 					Here's how to shop <br /> with Fast

@@ -81,12 +81,12 @@ function SideMenu(props) {
 			<div className={top ? "assets-menu-mobile" : "assets-menu-mobile scroll"}>
 				<Dropdown overlay={menu}>
 					<a className="assets-menu-mobile-item">
-						{currentParent} <Icon type="caret-down" />
+						<span>{currentParent}</span> <span><Icon type="caret-down" /></span>
 					</a>
 				</Dropdown>
 				<Dropdown overlay={submenu}>
 					<a className="assets-menu-mobile-item" >
-						{currentChild} <Icon type="caret-down" />
+						<span>{currentChild}</span> <span><Icon type="caret-down" /></span>
 					</a>
 				</Dropdown>
 			</div>

@@ -24,7 +24,7 @@
 
     &-container {
       margin: auto;
-
+      z-index: 1;
       @media screen and (max-width: 600px) {
         margin-left: 30px;
         margin-right: 30px;
@@ -74,7 +74,7 @@
       letter-spacing: 0.01em;
       color: #363636;
       cursor: pointer;
-      z-index: 999;
+      z-index: 1;
     }
 
     &-button:hover {
@@ -177,7 +177,7 @@
       height: 250px;
       text-transform: uppercase;
       padding-top: 130px;
-      background: -webkit-linear-gradient(#f1f1f1, white);
+      background: -webkit-linear-gradient(#f6f6f6, white);
       background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -185,7 +185,7 @@
         width: calc(100% - 25px);
         padding-top: 30px;
         height: 90px;
-        background: -webkit-linear-gradient(#f1f1f1, white);
+        background: -webkit-linear-gradient(#f6f6f6, white);
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }

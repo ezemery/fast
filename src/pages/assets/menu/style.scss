@@ -27,14 +27,17 @@
       position: fixed;
       width: 100%;
       top: 75px;
-
+      line-height: 16px;
+      
       .assets-menu-mobile-item {
         margin-right: 20px;
         color: #363636;
         text-decoration: none;
-
+        span{
+          vertical-align: text-bottom;
+        }
         &:first-child {
-          color: #88d20f;
+          color: #8d8d8d;
         }
 
         &:after {

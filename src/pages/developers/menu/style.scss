@@ -55,16 +55,19 @@
       width: 100%;
       top: 75px;
       z-index: 1;
+      line-height: 16px;
 
-
-
-      .assets-menu-mobile-item {
+      .developers-menu-mobile-item {
         margin-right: 20px;
         color: #363636;
         text-decoration: none;
 
+        span {
+          vertical-align: middle;
+        }
+
         &:first-child {
-          color: #88d20f;
+          color: #8d8d8d;
         }
 
         &:after {

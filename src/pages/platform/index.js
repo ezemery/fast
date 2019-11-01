@@ -84,10 +84,6 @@ function Platform() {
 				<div className="section-1-title">
 					Fast <span className="green">+</span> Shopify
 				</div>
-				<div className="section-1-desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor Lorem ipsum
-					dolor sit amet, consectetur .
-				</div>
 				<div className="section-1-back-1"></div>
 				<div className="section-1-back-2"></div>
 				<div className="section-1-back-3"></div>
@@ -96,18 +92,21 @@ function Platform() {
 				<div className="section-1-back-6"></div>
 			</div>
 			<div className="section-2">
-				<div className="section-2-title">
-					Now live-
-					<span className="bold">
-						Fast for
-						<br /> Shopify
-					</span>
+				<div className='section-2-1'>
+					<div className="section-2-1-title">
+						Now live-
+						<span className="bold">
+							Fast for
+							<br /> Shopify
+						</span>
+					</div>
+					<div className="section-2-1-desc">
+						The Fast built Shopify integration improves your shopping experience by providing easy, seamless
+						passwordless logins.
+					</div>
+					<div className="section-2-1-button">Connect Fast to Shopify</div>
 				</div>
-				<div className="section-2-desc">
-					The Fast built Shopify integration improves your shopping experience by providing easy, seamless
-					passwordless logins.
-				</div>
-				<div className="section-2-button">Connect Fast to Shopify</div>
+				<div className='section-2-2'></div>
 			</div>
 			<div className="section-3">
 				<div className="section-3-title">Install Fast in three simple steps</div>

@@ -149,7 +149,9 @@ function Menu(props) {
         </div>
       </div>
       <div
-        className={top ? 'developers-menu-mobile' : 'developers-menu-mobile scroll'}
+        className={
+          top ? 'developers-menu-mobile' : 'developers-menu-mobile scroll'
+        }
       >
         <Popover
           content={parentMenu}
@@ -161,8 +163,12 @@ function Menu(props) {
           }}
           arrowPointAtCenter
         >
-          <a className="assets-menu-mobile-item" href="/#">
-            DEVELOPERS <Icon type="caret-down" />
+          <a className="developers-menu-mobile-item" href="/#">
+            <span>DEVELOPERS</span>
+            <span>
+              {' '}
+              <Icon type="caret-down" />
+            </span>
           </a>
         </Popover>
 
@@ -175,8 +181,12 @@ function Menu(props) {
             setChildVisible(e);
           }}
         >
-          <a className="assets-menu-mobile-item" href="/#">
-            API DOCS <Icon type="caret-down" />
+          <a className="developers-menu-mobile-item" href="/#">
+            <span>API DOCS</span>
+            <span>
+              {' '}
+              <Icon type="caret-down" />
+            </span>
           </a>
         </Popover>
       </div>

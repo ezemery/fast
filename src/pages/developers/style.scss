@@ -4,6 +4,7 @@
     padding-top: 100px;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 393px);
 
     @media screen and (max-width: 600px) {
       display: block;

@@ -4,11 +4,11 @@ import Logo from '../../assets/img/logo_white.png';
 import GrayLogo from '../../assets/img/logo_gray.png';
 function Header2(props) {
 	let { type, buttonName, hasSubmenu, setup } = props;
-	const [top, setTop] = useState(true);
+	const [top, setTop] = useState('');
   useEffect(() => {
     const eventHandler = e => {
       console.log('mouse move', e);
-      window.pageYOffset > 0 ? setTop(false) : setTop(true);
+      window.pageYOffset > 0 ? setTop('scroll') : setTop('');
     };
     window.addEventListener('touchmove', eventHandler);
     return () => {
@@ -18,7 +18,7 @@ function Header2(props) {
   useEffect(() => {
     const eventHandler = e => {
       console.log('mouse move', e);
-      window.pageYOffset > 0 ? setTop(false) : setTop(true);
+      window.pageYOffset > 0 ? setTop('scroll') : setTop('');
     };
     window.addEventListener('scroll', eventHandler);
     return () => {
@@ -27,7 +27,7 @@ function Header2(props) {
   }, []);
 	return (
     <div
-      className={!top && !hasSubmenu ? 'header2 scroll' : 'header2'}
+      className={`header2 ${top} ${hasSubmenu ? 'scroll-desktop' : '' }`}
       style={{
         background: type === 'gray' ? '#363636' : 'white',
         color: type === 'gray' ? 'white' : '#363636',
