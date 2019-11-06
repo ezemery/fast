@@ -57,7 +57,7 @@ function Brand(props) {
             );
           })}
         </Swiper>
-        <div class="swiper-pagination"></div>
+        <div className="swiper-pagination"></div>
       </div>
       <div className="desktop-layout">
         {brands.map(brand => {
