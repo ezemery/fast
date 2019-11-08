@@ -1,10 +1,12 @@
 .assets-page-content-right {
   .typography {
+    margin-bottom: 50px;
+
     &-heading {
-      font-family: 'Graphik';
+      font-family: 'Graphik Semibold';
       font-size: 36px;
       line-height: 50px;
-      color: #2B4403;
+      color: #363636;
       text-align: left;
       padding-bottom: 20px;
       border-bottom: 1px solid #e2e2e2;
@@ -18,73 +20,77 @@
       }
     }
 
-    &-desc {
-      font-family: 'Graphik';
-      font-size: 16px;
-      line-height: 25px;
-      color: #3D3D3D;
-      margin-top: 27px;
-    }
+    &-section {
+      padding-top: 33px;
 
-    &-content {
-      display: flex;
-      margin-top: 30px;
       @media screen and (max-width: 600px) {
-        display: block;
+        padding-top: 10px;
       }
-      .section {
-        width: 370px;
-        margin: 20px;
+
+      &-heading {
+        font-family: 'Graphik';
+        font-size: 24px;
+        line-height: 50px;
+        letter-spacing: 0.01em;
+        color: #363636;
+      }
+
+      &-desc {
+        font-family: 'Graphik';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        color: #2F2F2F;
+      }
+
+      &-content {
+        margin-top: 33px;
+      }
+
+      &-typeface {
+        border: 1px solid #E0E6ED;
+        border-radius: 10px;
+        padding: 31px 40px;
+        font-family: 'Graphik';
+        font-size: 16px;
+        line-height: 40px;
+        letter-spacing: 0.5em;
+        color: #000000;
+        word-break: break-all;
+      }
+
+      &-font {
+        padding: 36px 58px;
+        background: #FFFFFF;
+        border: 1px solid #E0E6ED;
+        border-bottom: none;
+        border-radius: 0;
+
         @media screen and (max-width: 600px) {
-          width: auto;
+          padding: 32px 31px;
         }
+
         &-desc {
-          font-family: 'Graphik';
-          font-size: 16px;
-          line-height: 25px;
-          color: #3D3D3D;
-           @media screen and (max-width: 600px) {
-              width: 300px;
-            }
+          color: #7CB342
         }
 
-        &-content {
-          margin-top: 41px;
-          margin-bottom: 75px;
-          font-size: 36px;
-          line-height: 25px;
-          color: #3D3D3D;
-          @media screen and (max-width: 600px) {
-              font-size: 30px;
-            }
-
-          & > * {
-            line-height:60px;
-          }
+        &:first-child {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
         }
 
-        &-footer {
-          font-family: 'Graphik';
-          font-size: 18px;
-          line-height: 25px;
-          letter-spacing: 0.01em;
-          color: #88D20F;
-          width: fit-content;
-          cursor: pointer;
-
-          &:after {
-            content: '';
-            background: url('../../../assets/img/download_green_icon.png') no-repeat center center;
-            background-size: 20px 20px;
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            margin-left:5px;
-          }
+        &:last-child {
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          border-bottom: 1px solid #E0E6ED;
         }
       }
     }
-
 
   }
 }

@@ -1,55 +1,118 @@
 import React, {useState, useEffect} from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
-
+import { FaFont, FaHeart, FaPalette, FaEnvelope, FaLayerGroup } from 'react-icons/fa';
 import './style.scss';
+const { SubMenu } = Menu;
+
 const menu = (
 	<Menu>
-		<Menu.Item>BRAND GUIDELINES</Menu.Item>
-		<Menu.Item>ASSETS LIBRARY</Menu.Item>
+		<Menu.Item>Logo</Menu.Item>
+		<Menu.Item>Typography</Menu.Item>
+		<Menu.Item>Brand Colours</Menu.Item>
+		<Menu.Item>Components</Menu.Item>
+		<Menu.Item>Email Template</Menu.Item>
 	</Menu>
 );
 const submenu = (
 	<Menu>
-		<Menu.Item>Logo</Menu.Item>
-		<Menu.Item>Colours</Menu.Item>
-		<Menu.Item>Typography</Menu.Item>
+		<Menu.Item>Brand Logo</Menu.Item>
+		<Menu.Item>Logo guidelines</Menu.Item>
 	</Menu>
 );
-const SubMenu = props => {
-	const { text, children, currentParent, currentChild, onMenuClicked } = props;
+const DesktopMenu = props => {
+	const { data, onMenuClicked } = props;
 	return (
-		<div>
-			<div className="assets-menu-heading"> {text}</div>
-			{children.map(child => {
-				return (
-					<div
-						key={child}
-						className={
-							'assets-menu-item  ' + (currentChild === child && currentParent === text ? 'active' : '')
-						}
-						onClick={() => {
-							onMenuClicked({ currentParent: text, currentChild: child });
-						}}
-					>
-						{child}
-					</div>
-				);
-			})}
-		</div>
-	);
+    <Menu
+      defaultSelectedKeys={['logo']}
+      defaultOpenKeys={['logo']}
+      mode="inline"
+		>
+			{
+				data.map((item) => {
+					if (item.children.length === 0) {
+						 return <Menu.Item
+               key={item.text}
+               onClick={() => {
+                 onMenuClicked({ currentParent: item.text, currentChild: '' });
+               }}
+             >             
+                 {item.img}
+                 <span>{item.text}</span>            
+             </Menu.Item>;
+					} else {
+						return  <SubMenu
+							key={item.text}
+							title={
+								<span>
+									{item.img}
+									<span>{item.text}</span>
+								</span>
+							}
+							onTitleClick={() => {
+								onMenuClicked({ currentParent: item.text, currentChild: '' });
+							}}
+						>
+							{
+								item.children.map(child => {
+									return (
+                    <Menu.Item
+                      key={child}
+                      onClick={() => {
+                        onMenuClicked({
+                          currentParent: item.text,
+                          currentChild: child,
+                        });
+                      }}
+                    >
+                      {child}
+                    </Menu.Item>
+                  ); 
+								})
+							}
+						</SubMenu>
+					}
+				})
+			}     
+    </Menu>
+  );
 };
 function SideMenu(props) {
 	const { currentParent, currentChild } = props;
 	const data = [
-		{
-			text: 'BRAND GUIDELINES',
-			children: ['Logo', 'Colours', 'Font Families', 'Typography', 'Iconography', 'Buttons'],
-		},
-		{
-			text: 'ASSETS LIBRARY',
-			children: ['Templates', 'Forms', 'Illustrations', 'Videos', 'Imagery', 'Iconography'],
-		},
-	];
+    {
+      text: 'Logo',
+      img: <FaHeart size={12} />,
+      children: ['Brand Logo', 'Logo guidelines'],
+    },
+    {
+      text: 'Typography',
+			img: <FaFont size={12}/>,
+      children: ['Typeface', 'Font sizes'],
+    },
+    {
+      text: 'Brand Colors',
+			img: <FaPalette size={12}/>,
+      children: ['Primary colours', 'Secondary colours', 'Grey colours'],
+    },
+    {
+      text: 'Components',
+			img: <FaLayerGroup size={12}/>,
+      children: [
+        'Buttons',
+        'Forms',
+        'Header',
+        'Footer',
+        'Breadcrumbs',
+        'Cards',
+        'Code Picker',
+      ],
+    },
+    {
+      text: 'Email Template',
+			img: <FaEnvelope size={12}/>,
+      children: [],
+    },
+  ];
 		const [top, setTop] = useState(true);
     useEffect(() => {
       const eventHandler = e => {
@@ -74,19 +137,18 @@ function SideMenu(props) {
 	return (
 		<React.Fragment>
 			<div className="assets-menu">
-				{data.map(item => {
-					return <SubMenu key={item.text} {...item} {...props}></SubMenu>;
-				})}
+				 <DesktopMenu data={data} {...props}></DesktopMenu>
+				
 			</div>
 			<div className={top ? "assets-menu-mobile" : "assets-menu-mobile scroll"}>
 				<Dropdown overlay={menu}>
 					<a className="assets-menu-mobile-item">
-						<span>{currentParent}</span> <span><Icon type="caret-down" /></span>
+						<span>Logo</span> <span><Icon type="caret-down" /></span>
 					</a>
 				</Dropdown>
 				<Dropdown overlay={submenu}>
 					<a className="assets-menu-mobile-item" >
-						<span>{currentChild}</span> <span><Icon type="caret-down" /></span>
+						<span>Brand Logo</span> <span><Icon type="caret-down" /></span>
 					</a>
 				</Dropdown>
 			</div>

@@ -19,32 +19,59 @@ const Card = props => {
 	);
 };
 function Typography(props) {
-	let data = [
-		{
-			desc:
-				'<b>Muli</b> is used for high priority and low priority headings (H1, H2,H3,H4 etc) and it pairs nicely with TT norms. Its also used for the button text',
-			texts: ['Muli Regular', 'Muli Semi-bold', 'Muli Bold', 'Muli Extrabold'],
-			font: 'Muli',
-		},
-		{
-			desc:
-				'<b>TT Norms</b> is used mainly for the body text and it pairs nicely with Muli. Its also used for the button text',
-			texts: ['TT norms regular', 'TT norms medium', 'TT norms bold', 'TT norms extrabold'],
-			font: 'Graphik',
-		},
-	];
+	const fontArray = [
+    { fontSize: '48px', fontFamily: 'Graphik Bold' },
+    { fontSize: '36px', fontFamily: 'Graphik Medium' },
+    { fontSize: '28px', fontFamily: 'Graphik Medium' },
+    { fontSize: '24px', fontFamily: 'Graphik Regular' },
+    { fontSize: '21px', fontFamily: 'Graphik Regular' },
+    { fontSize: '18px', fontFamily: 'Graphik Regular' },
+    { fontSize: '16px', fontFamily: 'Graphik Regular' },
+    { fontSize: '14px', fontFamily: 'Graphik Regular' },
+  ];
 	return (
-		<div className="typography">
-			<div className="typography-heading">Typography</div>
-			<div className="typography-desc">
-				We use two typefaces on Fast website and the Fast app, namely Muli and TTnorms
-			</div>
-			<div className="typography-content">
-				{data.map(item => {
-					return <Card key={item.desc} {...item}></Card>;
-				})}
-			</div>
-		</div>
-	);
+    <div className="typography">
+      <div className="typography-heading">Typography</div>
+      <div className="typography-section">
+        <div className="typography-section-heading">Typeface</div>
+        <div className="typography-section-desc">
+          Fast's primary typeface is <b>Graphik</b> — a robust typeface with
+          legible numbers that renders well at all sizes. It is soft and
+          friendly, yet plain enough to get out of the way and let the user's
+          designs shine.
+        </div>
+        <div className="typography-section-content">
+          <div className="typography-section-typeface">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            <br /> abcdefghijklmnopqrstuvwxyz
+            <br /> 0123456789
+          </div>
+        </div>
+      </div>
+      <div className="typography-section">
+        <div className="typography-section-heading">Front sizes</div>
+        <div className="typography-section-desc">
+          The font scale consists of 8 different font sizes. The default size
+          applied to the body is rRegular.
+				</div>
+				<div className="typography-section-content">
+					{
+						fontArray.map((font) => {
+							return (
+                <div className="typography-section-font">                  
+                    <div style={font}>
+                      The quick brown fox jumps over the lazy dog
+										</div>
+										<div className="typography-section-font-desc">
+											{	`${font.fontFamily} ${font.fontSize}`	}
+										</div>                  
+                </div>
+              );
+						})
+					}
+				</div>
+      </div>
+    </div>
+  );
 }
 export default Typography;
