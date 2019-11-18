@@ -25,11 +25,11 @@ function App() {
 				<Route exact path="/platform" component={Platform} />
 				<Route exact path="/developers" component={Developers} />
 				<Route exact path="/faq" component={Faq} />
-				<Route exact path="/aboutus" component={AboutUs} />
+				<Route exact path="/about-us" component={AboutUs} />
 				<Route exact path="/dashboard" component={Dashboard} />
 				<Route exact path="/assets" component={Assets} />
 				<Route exact path="/shortcuts" component={Shortcuts} />
-				<Route exact path="/howitworks" component={HowItWorks} />
+				<Route exact path="/how-it-works" component={HowItWorks} />
 				<Route exact path="/warroom" component={WarRoom} />
 			</Switch>
 		</Router>

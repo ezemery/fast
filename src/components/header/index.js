@@ -3,7 +3,7 @@ import './style.scss';
 import HamburgerMenu from '../hamburgermenu';
 import LogoWhite from '../../assets/img/logo_white.png';
 import LogoGray from '../../assets/img/logo_gray.png';
-
+import { Link } from 'react-router-dom';
 function Header() {
   let buttonName = 'Fast Go';
   
@@ -11,7 +11,6 @@ function Header() {
   const [showBurger, setShowBurger] = useState(false)
 	useEffect(() => {
 		const eventHandler = e => {
-			console.log('mouse move', e);
 			window.pageYOffset > 0 ? setTop(false) : setTop(true);
 		};
 		window.addEventListener('touchmove', eventHandler);
@@ -22,7 +21,6 @@ function Header() {
   }, []);
   useEffect(() => {
     const eventHandler = e => {
-      console.log('mouse move', e);
       window.pageYOffset > 0 ? setTop(false) : setTop(true);
     };
     window.addEventListener('scroll', eventHandler);
@@ -41,10 +39,10 @@ function Header() {
             alt="header logo"
           />
           <div className={top ? 'header-menu' : 'header-menu white'}>
-            <a href="/#">How It Works</a>
-            <a href="/#">Company</a>
-            <a href="/#">For Business</a>
-            <a href="/#">Help</a>
+            <Link to="/how-it-works">How It Works</Link>
+            <Link to="/developers">Company</Link>
+            <Link to="/platform">For Business</Link>
+            <Link to="/faq">Help</Link>
           </div>
           <div className={top ? 'header-button' : 'header-button white'}>
             <div className="m-auto">{buttonName}</div>

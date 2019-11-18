@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
 import 'antd/dist/antd.css';
 import './style.scss';
