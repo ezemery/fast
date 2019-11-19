@@ -22,6 +22,7 @@
     &-title {
       font-family: Graphik;
       font-size: 46px;
+      font-weight: 900;
       line-height: 57px;
       text-align: center;
       color: #363636;
@@ -94,7 +95,7 @@
 
       &-1 {
         width: 383px;
-
+        width: calc(100% - 960px);
         @media screen and (max-width: 600px) {
           width: 100%;
         }
@@ -114,7 +115,7 @@
           margin-top: 26px;
           height: 292px;
           background: url('../../assets/img/careers_back_1.png') no-repeat center center;
-          background-size: 100% 100%;
+          background-size: cover;
 
           @media screen and (max-width: 600px) {
             height: 214px;
@@ -124,8 +125,8 @@
 
       &-2 {
         background: url('../../assets/img/careers_back_2.png') no-repeat center center;
-        background-size: 100% 100%;
-        width: 393px;
+        background-size: cover;
+        width: calc(100% - 960px);
         margin-left: 40px;
 
         @media screen and (max-width: 600px) {
@@ -137,9 +138,9 @@
       }
 
       &-3 {
-        width: 330px;
+        // width: 330px;
         margin-left: 40px;
-
+        width: calc(100% - 1004px);
         @media screen and (max-width: 600px) {
           width: 100%;
           margin-left: 0;
@@ -148,7 +149,7 @@
 
         &-1 {
           background: url('../../assets/img/careers_back_1.png') no-repeat center center;
-          background-size: 100% 100%;
+          background-size: cover;
           height: calc(50% - 13px);
           width: 100%;
 
