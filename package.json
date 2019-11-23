@@ -17,7 +17,7 @@
     "highcharts": "^7.2.0",
     "highcharts-react": "^0.0.3",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-aspect-ratio": "^1.0.41",
     "react-bootstrap": "^1.0.0-beta.14",
