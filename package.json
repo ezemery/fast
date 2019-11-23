@@ -60,6 +60,15 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },              
+  "engines": {
+    "node": "12.x.x"  
+  },              
+  "engines": {
+    "npm" : "6.12"
+  },              
+  "engines": {
+    "yarn" : ">=1.0.0 <2.0.0"    
   },
   "browserslist": {
     "production": [
