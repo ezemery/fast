@@ -18,8 +18,13 @@
     "highcharts-react": "^0.0.3",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
+<<<<<<< HEAD
     "node-sass": "^4.12.0",
     "react": "^16.12.0",
+=======
+    "node-sass": "^4.13.0",
+    "react": "^16.11.0",
+>>>>>>> 26893263be818e30710121250e05a050c07344a2
     "react-aspect-ratio": "^1.0.41",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-burger-menu": "^2.6.11",
