@@ -5,34 +5,36 @@
 const config =  {
   development: {
       // This is the space ID. A space is like a project folder in Contentful terms
-      space: process.env.SPACE_ID,
+      space: process.env.REACT_APP_SPACE_ID,
       // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-      accessToken: process.env.PREVIEW_ACCESS_TOKEN,
+      accessToken: process.env.REACT_APP_PREVIEW_ACCESS_TOKEN,
       // environment: 'staging',
       host: "preview.contentful.com"
   },
   production: {
       // This is the space ID. A space is like a project folder in Contentful terms
-      space: process.env.SPACE_ID,
+      space: process.env.REACT_APP_SPACE_ID,
       // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-      accessToken: process.env.ACCESS_TOKEN,
+      accessToken: process.env.REACT_APP_ACCESS_TOKEN,
       // environment: 'staging',
       host: "cdn.contentful.com"
   }
 }[process.env.NODE_ENV];
 
+
+
+
 const contentful = require("contentful");
 const client = contentful.createClient(config);
 
-export const getEntries = async function(id) {
+export const getEntries = async (id) => {
   try {
-    const entry = await client.getEntries({
+    const res = await client.getEntries({
       content_type: "page",
       "fields.slug": id,
       include: 10
     });
-
-    return reduceEntity(entry.items[0]);
+    return reduceEntity(res.items[0]);
   } catch (error) {
     return error;
   }

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Textfit } from 'react-textfit';
 import Ticker from 'react-ticker';
-
+import PropTypes from 'prop-types'
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Testimonial from '../../components/testimonial';
@@ -22,8 +22,9 @@ import SetupArrow1Img from '../../assets/img/setup-arrow1.png';
 import SetupArrow2Img from '../../assets/img/setup-arrow2.png';
 import { selectContentfulModules } from '../../redux/contentful/selectors';
 import { fetchContentfulStartAsync } from '../../redux/contentful/actions';
-import {connect} from 'react-redux';
-function Home() {
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+function Home({fetchContentful, modules}) {
 	const testimonial = [
 		{
 			comment: '"This is literally the fastest f**cking checkout ever"',
@@ -33,7 +34,10 @@ function Home() {
 		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 5 },
 		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 4 },
 	];
-
+  const test = modules && modules[0].threeColumns.map(e => {
+   return e
+  })
+  console.log(test)
 	const brands = [
 		{ name: 'Harris Farm', industry: 'Food' },
 		{ name: '24Hundred', industry: 'Clothing' },
@@ -56,8 +60,11 @@ function Home() {
 	];
 
 	const featureCategories = ['Popular', 'Trending', 'New Arrivals', 'Services', 'Beauty', 'Electronics'];
-	const [currentCategory, setCurrentCategory] = useState('Popular');
-
+  const [currentCategory, setCurrentCategory] = useState('Popular');
+  
+  useEffect(() => {
+    fetchContentful()
+  },[fetchContentful])
 	return (
     <div className="home">
       <Header></Header>
@@ -259,11 +266,17 @@ function Home() {
     </div>
   );
 }
-const mapStateToProps = createStructuedSelector({
+
+Home.propTypes = {
+  fetchContentful: PropTypes.func.isRequired,
+  modules: PropTypes.array.isRequired,
+}
+const mapStateToProps = createStructuredSelector({
   modules: selectContentfulModules
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchContentful: () => dispatch(fetchContentfulStartAsync('/index'))
-})
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

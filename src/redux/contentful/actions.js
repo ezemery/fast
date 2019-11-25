@@ -8,19 +8,25 @@ export const fetchContentfulStart = () => (
 export const fetchContentfulStartAsync = (slug) => async dispatch =>{
     dispatch(fetchContentfulStart());
     try {
-        const entries = getEntries(slug);
+        const entries = await getEntries(slug);
         dispatch(fetchContentfulSucess(entries));
     } catch (error) {
+        console.error(error)
         dispatch (fetchContentfulError(error)); 
-        throw new Error(error)
     }
 }
 
 
 export const fetchContentfulSucess = (payload) => (
-    {type: ContentfulActionTypes.FETCH_CONTENTFUL_SUCCESS, payload}
+    {
+        type: ContentfulActionTypes.FETCH_CONTENTFUL_SUCCESS, 
+        payload: payload
+    }
 );
 
 export const fetchContentfulError = (error) => (
-    {type: ContentfulActionTypes.FETCH_CONTENTFUL_ERROR, error}
+    {
+        type: ContentfulActionTypes.FETCH_CONTENTFUL_ERROR, 
+        payload: error
+    }
 );

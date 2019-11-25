@@ -39,11 +39,11 @@ function Testimonial(props) {
 		<div className="testimonial">
 			<div className="desktop-layout">
 				<Swiper {...desktopSwiperParams}>
-					{comments.map(comment => {
+					{comments.forEach(comment => {
 						return (
 							<div className="swiper-slide">
 								<div className="testimonial">
-									<div className="testimonial-comment">{comment.comment}</div>
+									<div className="testimonial-comment">{comment.title}</div>
 									<div className="d-flex mt-3">
 										<div className="m-auto d-flex">
 											<div className="testimonial-rating">
@@ -68,7 +68,7 @@ function Testimonial(props) {
 													})}
 												</div>
 											</div>
-											<div className="testimonial-user">{comment.user}</div>
+											<div className="testimonial-user">{comment.author}</div>
 										</div>
 									</div>
 								</div>

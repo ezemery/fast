@@ -11,7 +11,8 @@ export const INITIAL_STATE = {
 };
 
 export const contentReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
+  const {type, payload} = action
+  switch (type) {
     case ContentfulActionTypes.FETCH_CONTENTFUL_START:
       return {
         ...state,
@@ -21,17 +22,13 @@ export const contentReducer = (state = INITIAL_STATE, action) => {
       case ContentfulActionTypes.FETCH_CONTENTFUL_SUCCESS:
       return {
         ...state,
-        data: {
-          ...action.payload
-        },
+        data: payload,
         loading:false,
       };
       case ContentfulActionTypes.FETCH_CONTENTFUL_ERROR:
         return {
             ...state,
-            data: {
-              ...action.error
-            },
+            data: payload,
             loading:false,
         };
     default:
