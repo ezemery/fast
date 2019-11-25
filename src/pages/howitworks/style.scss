@@ -16,6 +16,7 @@
 
     &-title {
       font-size: 60px;
+      font-weight: 900;
       line-height: 125%;
       text-align: center;
       color: #363636;
@@ -23,7 +24,7 @@
 
       @media screen and (max-width: 600px) {
         width:100%;
-        font-size: 30px;
+        font-size: 37px;
         margin-bottom: 10px;
       }
     }
@@ -178,11 +179,15 @@
       &-title{
         font-size: 45px;
         line-height: 57px;
-        color: #19381F;
+        font-weight: 700;    
+        color: #2F2F2F;
+        @media screen and (max-width: 600px) {
+          font-size: 37px;
+        }
       }
       &-desc{
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 17px;
+        line-height: 29px;
         color: #696969;
         margin-top: 15px;
 
@@ -298,6 +303,7 @@
       &-heading{
         font-size: 60px;
         line-height: 125%;
+        font-weight: 900;
         letter-spacing: 0.01em;
         color: #19381F;
         @media screen and (max-width: 600px) {
