@@ -20,7 +20,9 @@ import Setup2Img from '../../assets/img/setup-2.png';
 import Setup3Img from '../../assets/img/setup-3.png';
 import SetupArrow1Img from '../../assets/img/setup-arrow1.png';
 import SetupArrow2Img from '../../assets/img/setup-arrow2.png';
-
+import { selectContentfulModules } from '../../redux/contentful/selectors';
+import { fetchContentfulStartAsync } from '../../redux/contentful/actions';
+import {connect} from 'react-redux';
 function Home() {
 	const testimonial = [
 		{
@@ -257,5 +259,11 @@ function Home() {
     </div>
   );
 }
+const mapStateToProps = createStructuedSelector({
+  modules: selectContentfulModules
+})
 
-export default Home;
+const mapDispatchToProps = dispatch => ({
+  fetchContentful: () => dispatch(fetchContentfulStartAsync('/index'))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
