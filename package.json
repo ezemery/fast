@@ -17,9 +17,10 @@
     "d3-selection": "^1.4.0",
     "highcharts": "^7.2.0",
     "highcharts-react": "^0.0.3",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
-    "react": "^16.11.0",
+    "react": "^16.12.0",
     "react-aspect-ratio": "^1.0.41",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-burger-menu": "^2.6.11",
@@ -46,7 +47,8 @@
     "reselect": "^4.0.0",
     "swipe": "^1.7.7",
     "swipe-js-iso": "^2.1.5",
-    "swiper": "^5.1.0"
+    "swiper": "^5.1.0",
+    "typescript": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
