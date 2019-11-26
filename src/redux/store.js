@@ -1,13 +1,15 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import reducer from './reducer';
-import { initialState } from './initialState';
+import logger from 'redux-logger'
+import {createStore, applyMiddleware, compose} from 'redux'
+import rootReducer from './reducer'
+import thunk from 'redux-thunk'
+const middlewears = [thunk] 
 
-export const store = createStore(
-  reducer(),
-  initialState,
-  compose(
-    applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
-  )
-);
+if(process.env.NODE_ENV === "development"){
+    middlewears.push(logger)
+}
+
+export const store = createStore(rootReducer, compose(
+  applyMiddleware(...middlewears),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+))
+export default store;  
