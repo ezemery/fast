@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import { FaWhatsapp, FaTwitter, FaLinkedin, FaDribbble, FaInstagram, FaGithub } from 'react-icons/fa';
 

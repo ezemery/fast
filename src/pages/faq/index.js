@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import PersonImg from '../../assets/img/team_1.png';
 

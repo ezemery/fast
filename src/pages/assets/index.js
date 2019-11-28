@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import Logo from './logo';
 import Colours from './colours';
