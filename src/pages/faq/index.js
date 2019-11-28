@@ -7,6 +7,7 @@ import PersonImg from '../../assets/img/team_1.png';
 import { FaGrin, FaMeh, FaFrown } from 'react-icons/fa';
 
 import './style.scss';
+import Header from '../../components/header';
 
 function Question(props) {
 	const { avatar, answers, question, author, date, votes } = props;
@@ -81,7 +82,7 @@ function Faq() {
   ];
 	return (
     <div className="faq-page">
-      <Header2 buttonName="Fast Go" type="gray"></Header2>
+      <Header themeType="2" buttonName="Fast Go" type="gray"></Header>
       <div className="section-1">
         <div className="section-1-title">Got Questions?</div>
         <div className="section-1-desc">

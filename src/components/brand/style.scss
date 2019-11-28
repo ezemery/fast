@@ -1,5 +1,5 @@
 .brand-panel {
-	margin-top: 100px;
+	margin-top: 6px;
 	width: 100%;
 
 	@media screen and (max-width: 600px) {
@@ -20,9 +20,8 @@
 	}
 
 	.brand-item {
-		width: 20%;
-		margin-left: 4%;
-		margin-top: 70px;
+		transition: all 1s ease;
+		margin:2.5rem 1.5rem;
 
 		@media screen and (max-width: 600px) {
 			width: 100%;
@@ -51,9 +50,17 @@
 			color: #c8c8c8;
 		}
 	}
-
+	.col-md-3{
+		transition: all 1s ease;
+		cursor: pointer;
+		&:hover{
+			background: #FFFFFF;
+			box-shadow: 0px 0px 70px rgba(43, 68, 3, 0.1);
+			border-radius: 10px;
+		}
+	}
 	.brand-item:last-child {
-		margin-right: 4%;
+		
 	}
 }
 
@@ -67,13 +74,7 @@
 }
 
 .desktop-layout {
-	display: block;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-
 	@media screen and (max-width: 600px) {
-		display: none;
+		display: none !important;
 	}
 }

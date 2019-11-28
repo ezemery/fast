@@ -1,12 +1,12 @@
-.footer {
-  color: white;
+.footer__background{
   background: #363636;
-  height: 393px;
+  min-height: 393px;
+}
+.footer {
+
+  color: white;
   display: flex;
   padding-top: 77px;
-  padding-left: 128px;
-  padding-right: 130px;
-
   @media screen and (max-width: 600px) {
     padding: 0px;
     display: block;
@@ -30,6 +30,7 @@
 
       *:first-child {
         margin-bottom: 10px;
+        width: 98px;
       }
 
       @media screen and (max-width: 600px) {
@@ -77,7 +78,7 @@
 
   &-col-2,
   &-col-3 {
-    font-family: 'Graphik Semibold';
+    font-family: 'Graphik';
 
     * {
       margin-top: 21px;
@@ -185,7 +186,7 @@
   .desktop-layout {
     display: flex;
     margin-left: auto;
-
+    width: 100%;
     @media screen and (max-width: 600px) {
       display: none;
     }

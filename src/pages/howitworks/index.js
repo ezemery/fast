@@ -9,6 +9,7 @@ import ShopBrandHarrisFarm from '../../assets/img/shop_brand_harris_farm.png';
 import ShopBrandFashionNova from '../../assets/img/shop_brand_fashion_nova.png';
 import ShopBrand2Hundred from '../../assets/img/shop_brand_2hundred.png';
 import ShopBrandAmazon from '../../assets/img/shop_brand_amazon.png';
+import Header from '../../components/header';
 
 function Step(props) {
 	const { step, title, desc, button } = props;
@@ -53,7 +54,7 @@ function HowItWorks() {
 
 	return (
 		<div className="howitworks-page">
-			<Header2 buttonName="Fast Go" setup={true}></Header2>
+			<Header themeType="2" buttonName="Fast Go" setup={true}></Header>
 			<div className="banner">
 				<div className="banner-title">
 					Here's how to shop <br /> with Fast

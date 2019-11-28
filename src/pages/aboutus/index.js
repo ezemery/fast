@@ -11,6 +11,7 @@ import Team3Img from '../../assets/img/team_3.png';
 import Team4Img from '../../assets/img/team_4.png';
 import Team5Img from '../../assets/img/team_5.png';
 import Team6Img from '../../assets/img/team_6.png';
+import Header from '../../components/header';
 function Box(props) {
 	const { title, desc } = props;
 	return (
@@ -94,7 +95,7 @@ function AboutUs() {
 	];
 	return (
 		<div className="aboutus-page">
-			<Header2 buttonName="Fast Go"></Header2>
+			<Header themeType="2" buttonName="Fast Go"></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					Get to know Fast and

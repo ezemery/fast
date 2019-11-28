@@ -59,10 +59,12 @@ function Brand(props) {
         </Swiper>
         <div className="swiper-pagination"></div>
       </div>
-      <div className="desktop-layout">
+      <div className="desktop-layout row">
         {brands.map(brand => {
           return (
-            <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
+           <div className="col-md-3">
+			    <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
+		   </div>
           );
         })}
       </div>
