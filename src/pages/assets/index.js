@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import Logo from './logo';
 import Colours from './colours';
@@ -10,6 +8,7 @@ import Email from './email';
 import SideMenu from './menu';
 
 import './style.scss';
+import Header from '../../components/header';
 
 function Content(props) {
 	const { currentChild, currentParent } = props;
@@ -34,7 +33,7 @@ function Assets() {
 	const [category, setCategory] = useState({ currentParent: 'logo', currentChild: '' });
 	return (
 		<div className="assets-page">
-			<Header2 buttonName="Fast Go" hasSubmenu={true}></Header2>
+			<Header themeType="2" buttonName="Fast Go" hasSubmenu={true}></Header>
 			<div className="assets-page-content">
 				<SideMenu {...category} onMenuClicked={state => setCategory(state)}></SideMenu>
 				<div className="assets-page-content-right">

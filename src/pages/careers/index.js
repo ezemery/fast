@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 
 import './style.scss';
@@ -8,6 +7,7 @@ import './style.scss';
 import CreativePeopleImg from '../../assets/img/creative_people.png';
 import UnlimitedBenefitsImg from '../../assets/img/unlimited_benefits.png';
 import WorkRemotelyImg from '../../assets/img/work_remotely.png';
+import Header from '../../components/header';
 function Card(props) {
 	const { title, desc } = props;
 	return (
@@ -87,7 +87,7 @@ function Careers() {
 	];
 	return (
 		<div className="careers-page">
-			<Header2 buttonName="Fast Go" ></Header2>
+			<Header themeType="2" buttonName="Fast Go" ></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					We appreciate <br /> the curious and creative.
@@ -101,12 +101,7 @@ function Careers() {
 				<div className="section-2-content">
 					<div className="section-2-content-1">
 						<div className="section-2-content-1-1">
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-							architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-							aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-							voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-							consectetur, adipisci velit, sed quia non numqiatur?"
+						Fast's mission is to be the world's fastest checkout and login experience. At Fast, we are creating a world without usernames and passwords. <br/><br/> A world where you no longer need to manually type in your payment details online and where your personal information is stored in one central, secure place. Our goal is to help you buy what you want, when you want, as quickly as possible. If you share this vision with us, then FAST is the place for you.
 						</div>
 						<div className="section-2-content-1-2"></div>
 					</div>
@@ -117,6 +112,15 @@ function Careers() {
 					</div>
 				</div>
 			</div>
+			{/* <div className="container">
+				<div className="grid__layout">
+					<div className="vision__title">
+						<p>Fast's mission is to be the world's fastest checkout and login experience. At Fast, we are creating a world without usernames and passwords. A world where you no longer need to manually type in your payment details online and where your personal information is stored in one central, secure place. Our goal is to help you buy what you want, when you want, as quickly as possible. If you share this vision with us, then FAST is the place for you.</p>
+					</div>
+					<div className="lg_image"></div>
+					div.
+				</div>
+			</div> */}
 			<div className="section-3">
 				<div className="section-3-title">Perks of working with us</div>
 				<div className="section-3-content">

@@ -19,17 +19,8 @@
     "highcharts-react": "^0.0.3",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-<<<<<<< HEAD
-    "node-sass": "^4.12.0",
-    "react": "^16.12.0",
-=======
     "node-sass": "^4.13.0",
-<<<<<<< HEAD
-    "react": "^16.11.0",
->>>>>>> 26893263be818e30710121250e05a050c07344a2
-=======
     "react": "^16.12.0",
->>>>>>> ee005c934ab9180e731fdc8012688deb3b2b6da7
     "react-aspect-ratio": "^1.0.41",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-burger-menu": "^2.6.11",
@@ -53,12 +44,8 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-<<<<<<< HEAD
-    "semver": "^6.3.0",
-=======
     "reselect": "^4.0.0",
     "styled-components": "^4.4.1",
->>>>>>> ee005c934ab9180e731fdc8012688deb3b2b6da7
     "swipe": "^1.7.7",
     "swipe-js-iso": "^2.1.5",
     "swiper": "^5.1.0",
@@ -72,15 +59,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },              
-  "engines": {
-    "node": "12.x.x"  
-  },              
-  "engines": {
-    "npm" : "6.12"
-  },              
-  "engines": {
-    "yarn" : ">=1.0.0 <2.0.0"    
   },
   "browserslist": {
     "production": [

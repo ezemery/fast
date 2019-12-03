@@ -1,17 +1,17 @@
-.home {
+.home{
 
   .section-1 {
-    height: 100vh;
-    background: linear-gradient(180deg, #1a8293 0%, rgb(182, 220, 226) 100%);
-    background: -webkit-linear-gradient(180deg, #1a8293 0%, rgb(182, 220, 226) 100%);
-    background: -o-linear-gradient(180deg, #1a8293 0%, rgb(182, 220, 226) 100%);
+    height: calc(100vh - 130px);
+    background:  linear-gradient(rgb(26, 130, 147) 0%, rgba(182, 220, 226, 0) 100%) center bottom no-repeat;
+    background: -webkit-linear-gradient(rgb(26, 130, 147) 0%, rgba(182, 220, 226, 0) 100%) center bottom no-repeat;
+    background: -o-linear-gradient(rgb(26, 130, 147) 0%, rgba(182, 220, 226, 0) 100%) center bottom no-repeat;
     display: flex;
 
     &::after {
       content: '';
       background: url('../../assets/img/hero_1.png') no-repeat center center;
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 130px);
       background-size: 100%;
       position: absolute;
       background-position: left 0 bottom 0;
@@ -32,10 +32,11 @@
     }
 
     &-title {
-      font-family: 'Graphik Semibold';
+      font-family: 'Graphik';
       font-size: 46px;
       line-height: 53px;
       text-align: center;
+      font-weight: 700;
       color: #ffffff;
 
       @media screen and (max-width: 600px) {
@@ -45,12 +46,17 @@
     }
 
     &-desc {
-      margin-top: 28px;
-      font-family: 'Graphik';
-      font-size: 18px;
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      margin-top:1.5rem;
       line-height: 26px;
+      /* or 147% */
+
       text-align: center;
-      color: #ffffff;
+
+      color: #FFFFFF;
     }
 
     &-wave {
@@ -59,52 +65,46 @@
     }
 
     &-button {
-      background: #ffffff;
-      margin: auto;
-      margin-top: 27px;
-      border-radius: 5px;
-      width: 244px;
-      height: 68px;
-      text-align: center;
-      vertical-align: middle;
-      font-family: 'Graphik';
-      font-size: 16px;
-      line-height: 18px;
-      text-align: center;
-      letter-spacing: 0.01em;
-      color: #363636;
-      cursor: pointer;
-      z-index: 1;
-    }
+      .btn-fast{
+        font-family: Graphik;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        margin: 2rem auto;
+        border: none;
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: #363636;
+        background: #fff;
+        padding: 18px 40px;
 
-    &-button:hover {
-      background-color: #dff5ef;
+      }
     }
   }
 
   .section-2 {
     background: #fafafa;
-    height: 150px;
+    height: 130px;
     display: flex;
   }
 
   .section-3 {
     margin-top: 63px;
-    margin-left: 98px;
-    margin-right: 98px;
     background: white;
 
     @media screen and (max-width: 600px) {
       margin-top: 30px;
-      margin-left: 28px;
-      margin-right: 28px;
     }
 
     .title {
       font-family: 'Graphik';
-      font-size: 28px;
+      font-size: 25px;
       line-height: 50px;
       align-items: center;
+      font-weight: 600;
       text-align: left;
       color: #363636;
     }
@@ -126,11 +126,12 @@
 
       .category-item {
         font-family: 'Graphik';
-        font-size: 20px;
+        font-size: 17px;
         line-height: 50px;
+        font-weight: 500;
         text-align: center;
         color: #878787 !important;
-        margin-left: auto;
+        margin-left: auto;    
 
         @media screen and (max-width: 600px) {
           margin-left: 40px;
@@ -169,25 +170,30 @@
 
     &-background {
       position: absolute;
-      width: calc(100% - 184px);
-      font-family: 'Graphik Semibold';
+      width: 100%;
+      font-family: 'Graphik';
+      font-weight: 600;
       line-height: 50px;
       align-items: center;
+      left: 50%;
+      transform: translate(-50%, 5%);
+      font-weight: 800 !important;
       text-align: center;
       height: 250px;
       text-transform: uppercase;
-      padding-top: 130px;
+      padding-top:96px;
       background: -webkit-linear-gradient(#f6f6f6, white);
+      -webkit-background-clip: text;
       background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: #00000003;
 
       @media screen and (max-width: 600px) {
-        width: calc(100% - 25px);
+        width: 100%;
         padding-top: 30px;
         height: 90px;
         background: -webkit-linear-gradient(#f6f6f6, white);
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: #00000003;
       }
     }
 
@@ -197,7 +203,8 @@
       border-radius: 5px;
       padding-top: 22px;
       padding-bottom: 21px;
-      font-family: 'Graphik Semibold';
+      font-family: 'Graphik';
+      font-weight: 600;
       font-size: 16px;
       line-height: 18px;
       text-align: center;
@@ -207,7 +214,8 @@
 
       @media screen and (max-width: 600px) {
         color: #88d20f;
-        font-family: 'Graphik Semibold';
+        font-family: 'Graphik';
+        font-weight: 600;
         text-align: center;
         font-size: 16px;
         line-height: 50px;
@@ -236,7 +244,8 @@
       padding-right: 39px;
       font-size: 20px;
       color: #363636;
-      font-family: 'Graphik Semibold';
+      font-family: 'Graphik';
+      font-weight: 600;
 
       @media screen and (max-width: 600px) {
         display: block;
@@ -267,11 +276,15 @@
     padding-top: 53px;
 
     &-title {
-      color: #363636;
-      font-family: 'Graphik';
-      font-size: 28px;
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
       line-height: 50px;
+      /* identical to box height, or 179% */
       text-align: center;
+
+      color: #2F2F2F;
 
       @media screen and (max-width: 600px) {
         font-size: 24px;
@@ -292,8 +305,6 @@
     }
 
     &-container {
-      padding-left: 166px;
-      padding-right: 166px;
       padding-top: 74px;
       display: flex;
 
@@ -305,7 +316,6 @@
 
       .setup {
         margin-left: auto;
-        margin-right: auto;
 
         @media screen and (max-width: 600px) {
           margin-top: 70px;
@@ -323,7 +333,8 @@
           margin-top: 47px;
           font-family: Graphik;
           font-size: 24px;
-          line-height: 50px;
+          font-weight: 600;
+          line-height: 37px;
           color: #363636;
           text-align: center;
 
@@ -334,12 +345,13 @@
         }
 
         &-desc {
-          margin-top: 14px;
-          font-family: Graphik;
-          font-size: 16px;
-          line-height: 25px;
-          color: #666666;
-          text-align: center;
+            margin-top: 14px;
+            font-family: Graphik;
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 500;
+            color: #666666;
+            text-align: center;
         }
 
         &-arrow {
@@ -371,25 +383,19 @@
   .section-6 {
     height: 572px;
     color: white;
-    background: url('../../assets/img/hero_2.png') no-repeat center center;
-    background-size: 100% 100%;
+    background: radial-gradient(73.6% 372.05% at 3.88% 19.32%, #000000 0%, rgba(0, 0, 0, 0.737709) 26.23%, rgba(0, 0, 0, 0.496636) 50.34%, rgba(0, 0, 0, 0) 100%),url('../../assets/img/hero_2.png') no-repeat center center;
+    background-size: cover;
 
     @media screen and (max-width: 600px) {
       background: url('../../assets/img/hero_2_mobile.png') no-repeat center center;
       height: 375px;
-      background-size: 100% 100%;
+      background-size: cover;
     }
 
     &-container {
-      width: 100%;
       height: 572px;
-      padding-top: 160px;
-      padding-left: 130px;
-      background: radial-gradient(73.6% 372.05% at 3.88% 19.32%,
-          #000000 0%,
-          rgba(0, 0, 0, 0.737709) 26.23%,
-          rgba(0, 0, 0, 0.496636) 50.34%,
-          rgba(0, 0, 0, 0) 100%);
+      padding-top: 120px;
+    
 
       @media screen and (max-width: 600px) {
         background: rgba(0, 0, 0, 0.4);
@@ -402,13 +408,16 @@
     &-title {
       font-family: 'Graphik';
       font-size: 70px;
-      line-height: 73px;
+      line-height: 72px;
       text-align: left;
+      color: #fff;
+      font-weight: 700;
 
       @media screen and (max-width: 600px) {
         font-size: 36px;
         line-height: 40px;
         text-align: center;
+        font-weight: 700;
       }
     }
 
@@ -417,7 +426,7 @@
       text-align: left;
       font-size: 16px;
       line-height: 25px;
-      width: 324px;
+      width: 100%;
 
       @media screen and (max-width: 600px) {
         margin-top: 12px;
@@ -455,41 +464,25 @@
   .section-7 {
     height: 842px;
     background-color: white;
-    background: url('../../assets/img/hero_3.png') no-repeat center center;
-    background-size: 561px 478px;
-    background-position: top 169px right 177px;
     padding-top: 187px;
-    padding-left: 130px;
 
     @media screen and (max-width: 600px) {
       height: 862;
       text-align: center;
-      background-size: 300px 255px;
-      background-position: top 440px right 25px;
       padding-top: 43px;
-      padding-left: 80px;
-      padding-right: 80px;
     }
-
+    img{
+      width:100%;
+    }
     &-2 {
-      text-align: left;
-      padding-top: 60px;
-      padding-left: 42px;
-      width: 614px;
-      height: 364px;
-      margin-left: 130px;
-
-      @media screen and (max-width: 600px) {
-        padding: 0;
-        width: 100%;
-        margin: 0;
-
-      }
 
       &-title {
-        font-family: 'Graphik';
+        font-family: Graphik;
+        font-style: normal;
+        font-weight: 600;
         font-size: 90px;
         line-height: 100px;
+
         color: #2F2F2F;
 
         @media screen and (max-width: 600px) {
@@ -508,7 +501,6 @@
         font-family: 'Graphik';
         font-size: 18px;
         line-height: 30px;
-        max-width: 454px;
 
         @media screen and (max-width: 600px) {
           width: 100%;
@@ -521,7 +513,7 @@
         display: flex;
 
         @media screen and (max-width: 600px) {
-          margin-top: 385px;
+          margin-bottom: 15px;
           width: 100%;
           display: flex;
           justify-content: center;
@@ -571,7 +563,11 @@
   }
 
   .section-8 {
-    background: url('../../assets/img/hero_4.png') no-repeat center center;
+    background: radial-gradient(73.6% 372.05% at 103.88% 19.32%,
+    #000000 0%,
+    rgba(0, 0, 0, 0.737709) 26.23%,
+    rgba(0, 0, 0, 0.496636) 50.34%,
+    rgba(0, 0, 0, 0) 100%) ,url('../../assets/img/hero_4.png') no-repeat center center;
     background-size: cover;
     height: 572px;
     color: white;
@@ -583,15 +579,8 @@
 
     &-container {
       padding-top: 113px;
-      padding-right: 93px;
       width: 100%;
       height: 100%;
-      background: radial-gradient(73.6% 372.05% at 103.88% 19.32%,
-          #000000 0%,
-          rgba(0, 0, 0, 0.737709) 26.23%,
-          rgba(0, 0, 0, 0.496636) 50.34%,
-          rgba(0, 0, 0, 0) 100%);
-
       @media screen and (max-width: 600px) {
         padding-top: 80px;
         padding-right: 0;
@@ -611,8 +600,9 @@
 
     &-title {
       font-family: 'Graphik';
-      font-size: 45px;
+      font-size: 42px;
       line-height: 68px;
+      font-weight: 600;
 
       @media screen and (max-width: 600px) {
         font-size: 36px;
@@ -624,7 +614,7 @@
     }
 
     &-desc {
-      margin-top: 49px;
+      margin-top: 20px;
       font-family: 'Graphik';
       font-size: 16px;
       line-height: 25px;
