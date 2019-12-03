@@ -9,6 +9,7 @@ import Brand from '../../components/brand';
 import Button from '../../components/button';
 import './style.scss';
 import WaveImg from '../../assets/img/wave.png';
+import Section7Image from '../../assets/img/hero_3.png'
 import GreenWaveImg from '../../assets/img/green_wave.png';
 import AppleImg from '../../assets/img/brand_apple.png';
 import AmazonImg from '../../assets/img/brand_amazon.png';
@@ -34,10 +35,7 @@ function Home({fetchContentful, modules}) {
 		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 5 },
 		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 4 },
 	];
-  const test = modules && modules[0].threeColumns.map(e => {
-   return e
-  })
-  console.log(test)
+
 	const brands = [
 		{ name: 'Harris Farm', industry: 'Food' },
 		{ name: '24Hundred', industry: 'Clothing' },
@@ -67,7 +65,7 @@ function Home({fetchContentful, modules}) {
   },[fetchContentful])
 	return (
     <div className="home">
-      <Header></Header>
+      <Header themeType="1"></Header>
       <div className="section-1">
         <div className="section-1-container">
           <div className="section-1-title">
@@ -80,9 +78,9 @@ function Home({fetchContentful, modules}) {
           <div className="section-1-wave">
             <img className="m-auto" src={WaveImg} alt="wave"></img>
           </div>
-          <div className="d-flex">
-            <div className="section-1-button d-flex">
-              <div className="m-auto">Setup Fast Checkout</div>
+          <div className="d-block m-auto">
+            <div className="section-1-button">
+              <button className="btn-fast">SETUP FAST CHEKOUT</button>
             </div>
           </div>
         </div>
@@ -90,10 +88,10 @@ function Home({fetchContentful, modules}) {
       <div className="section-2">
         <Testimonial className="m-auto" comments={testimonial}></Testimonial>
       </div>
-      <div className="section-3">
+      <div className="section-3 container">
         <div className="row">
           <div className="col-md-4 col-sm-12">
-            <div className="title">Shop featured brands</div>
+            <h1 className="title">Shop featured brands</h1>
           </div>
           <div className="col-md-8 categories">
             {featureCategories.map(feature => {
@@ -116,7 +114,7 @@ function Home({fetchContentful, modules}) {
           </div>
         </div>
         <div className="row clearfix">
-          <Textfit mode="single" max={500} className="section-3-background">
+          <Textfit mode="single" max={300} className="section-3-background">
             {currentCategory}
           </Textfit>
           <Brand brands={brands}></Brand>
@@ -150,19 +148,19 @@ function Home({fetchContentful, modules}) {
         </div>
       </div>
       <div className="section-5">
-        <div className={'section-5-title'}>Get it done in 3 Easy steps</div>
+        <h1 className='section-5-title'>Complete your Purchase in 3 Easy Steps</h1>
         <div className="section-5-wave">
           <img className="m-auto" src={GreenWaveImg} alt="wave"></img>
         </div>
-        <div className="section-5-container">
+        <div className="section-5-container container">
           <div className="setup mt-md-5">
             <div className="setup-img">
               <img src={Setup1Img} alt="number"></img>
             </div>
-            <div className="setup-title">Setup Fast Checkout</div>
-            <div className="setup-desc">
+            <h3 className="setup-title">Setup Fast Checkout</h3>
+            <p className="setup-desc">
               Fill our request form just once and <br /> get your info cookied.
-            </div>
+            </p>
           </div>
           <div className="setup-arrow">
             <img src={SetupArrow1Img} alt="arrow"></img>
@@ -171,12 +169,12 @@ function Home({fetchContentful, modules}) {
             <div className="setup-img">
               <img src={Setup2Img} alt="number"></img>
             </div>
-            <div className="setup-title">
+            <h3 className="setup-title">
               Browse our featured <br /> brands
-            </div>
-            <div className="setup-desc">
+            </h3>
+            <p className="setup-desc">
               Shop from our partners directly on fast
-            </div>
+            </p>
           </div>
           <div className="setup-arrow">
             <img src={SetupArrow2Img} alt="arrow"></img>
@@ -185,11 +183,11 @@ function Home({fetchContentful, modules}) {
             <div className="setup-img">
               <img src={Setup3Img} alt="number"></img>
             </div>
-            <div className="setup-title">Superfast checkout</div>
-            <div className="setup-desc" style={{ fontSize: '14px' }}>
+            <h3 className="setup-title">Superfast checkout</h3>
+            <p className="setup-desc">
               Since your info is cookied you dont have <br /> to fill anything.
               Its as simple as ABC!
-            </div>
+            </p>
           </div>
         </div>
         <div className="d-flex justify-content-center setup-fast-row">
@@ -199,14 +197,14 @@ function Home({fetchContentful, modules}) {
         </div>
       </div>
       <div className="section-6">
-        <div className="section-6-container">
-          <div className="section-6-title">
+        <div className="section-6-container container">
+          <h3 className="section-6-title">
             Let's work <br />
             together.
-          </div>
-          <div className="section-6-desc">
+          </h3>
+          <p className="section-6-desc">
             Integrate Fast checkout and start boosting your sales.
-          </div>
+          </p>
           <div className="section-6-footer">
             <div className="d-flex justify-content-center">
               <Button type="green" width={189}>
@@ -221,30 +219,36 @@ function Home({fetchContentful, modules}) {
           </div>
         </div>
       </div>
-      <div className="section-7">
-        <div className="section-7-2">
-          <div className="section-7-2-title">
-            Safe & <br />
-            Secure.
+      <div className="section-7 container">
+        <div className="row">
+          <div className="col-md-6">
+              <div className="section-7-2">
+                <div className="section-7-2-title">
+                  Safe & <br />
+                  Secure.
+                </div>
+                <div className="section-7-2-desc">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                  quae ab illo inventore veritatis.
+                </div>
+                <div className="section-7-2-footer">
+                  <Button type="green" width={244}>
+                    View security details
+                  </Button>
+                </div>
+            </div>
           </div>
-          <div className="section-7-2-desc">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis.
-          </div>
-          <div className="section-7-2-footer">
-            <Button type="green" width={244}>
-              View security details
-            </Button>
+          <div className="col-md-6">
+            <img src={Section7Image} alt="Section 7 image"></img>
           </div>
         </div>
       </div>
       <div className="section-8">
-        <div className="section-8-container">
+        <div className="section-8-container container">
           <div className="section-8-box">
             <div className="section-8-title">
-              Download the Fast app.
-              <br /> Faster. Easier. More Secure
+              Fast app is coming soon. <br /> Its Faster and more secure
             </div>
             <div className="section-8-desc">
               Input your email address, we'll send you a download link.

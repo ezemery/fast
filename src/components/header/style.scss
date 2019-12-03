@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  height: 120px;
+  height: 100px;
   background: transparent;
   color: white;
   display: flex;
@@ -12,7 +12,7 @@
   &.white {
     background: white;
     color: #363636;
-    height: 94px;
+    height: 70px;
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     -ms-animation: fadein 1s;
@@ -29,8 +29,7 @@
   }
 
   &-logo {
-    height: 30px;
-    margin: auto;
+    height: 24px;
     cursor: pointer;
   }
 
@@ -66,25 +65,33 @@
 
   &-button {
     margin-left: auto;
-    width: 128px;
-    height: 48px;
-    background: white;
-    font-family: 'Graphik';
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    color: #363636;
-    border-radius: 5px;
     display: flex;
+    transition: all 1s ease;
     cursor: pointer;
-
+    button{
+      font-family: 'Graphik';
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      transition: all 1s ease;
+      padding: 13px 35px;
+      color: #363636;
+      border: none !important;
+      border-radius: 5px !important;
+    }
     &.white {
-      color: white;
-      background: #363636;
-
-      &:hover {
+      button{
         color: white;
         background: #363636;
+      }
+      
+
+      &:hover {
+        button{
+           color: white;
+          background: #363636;
+        }
+       
       }
     }
 
@@ -164,17 +171,13 @@
       margin-top: -5px;
 
       &.white {
-        background: #363636;
-        color: white;
         margin-top: 0;
       }
     }
 
     .burger-button {
-      margin-left: 15px;
-      margin-right: 25px;
-      margin-top: 14px;
       display: block;
+      margin: auto 0px auto 16px;
       width: 30px;
       height: 20px;
       background: url('../../assets/img/hamburger.png') no-repeat center center;
@@ -195,5 +198,191 @@
 
   to {
     opacity: 1;
+  }
+}
+
+
+// Header 2
+
+.header2 {
+  height: 90px;
+  background: white;
+  color: #363636;
+  display: flex;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+	
+	&.scroll{
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+    height: 75px !important;
+    &.scroll-desktop{
+      @media screen and (max-width: 600px){
+        box-shadow: none;
+        height: 75px !important;
+      }
+    }
+  }
+  &-container {
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+  }
+
+  &-logo {
+    height: 30px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  &-menu {
+    display: flex;
+    margin: auto;
+    font-family: 'Graphik';
+    font-size: 17px;
+    line-height: 23px;
+
+    a {
+      margin-right: 60px;
+      color: #363636;
+      cursor: pointer;
+    }
+
+    a:last-child {
+      margin-right: 0;
+    }
+
+    &.gray {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  &-button {
+    margin-left: auto;
+    display: flex;
+    transition: all 1s ease;
+    cursor: pointer;
+    &.gray {
+      button{
+        background: white !important;
+        color: #363636 !important;
+      }
+    }
+    button{
+      font-family: 'Graphik';
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      transition: all 1s ease;
+      padding: 13px 35px;
+      color: #fff;
+      background: #363636;
+      font-family: 'Graphik';
+      border: 1px solid #363636;
+      border: none !important;
+      border-radius: 5px !important;
+    }
+    &.white {
+      button{
+        color: white;
+        background: #363636;
+      }
+      
+
+      &:hover {
+        button{
+           color: white;
+          background: #363636;
+        }
+       
+      }
+    }
+
+    &:hover {
+      // background: white;
+      // color: #363636;
+    }
+  }
+
+
+  &-mobile-button {
+    font-family: 'Graphik';
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px;
+    background: #363636;
+    color: white;
+    border: 1px solid #363636;
+    border-radius: 5px;
+    display: none;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .burger-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header2 {
+    height: 75px;
+
+    &-container {
+      min-width: 320px;
+      margin-left: 28px;
+      margin-top: auto;
+      margin-bottom: auto;
+      display: flex;
+      width: 100%;
+      min-width: auto;
+    }
+
+    &-container-white {
+      margin-top: 28px;
+    }
+
+    &-logo {
+      height: 23px;
+      margin: 0;
+      cursor: pointer;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &-menu {
+      display: none;
+    }
+
+    &-button {
+      height: 36px;
+      &.setup{
+        font-size: 12px;
+      }
+    }
+
+    &-mobile-button {
+      margin-left: auto;
+      margin-top: -5px;
+    }
+
+    .burger-button {
+      display: block;
+      margin: auto 0px auto 16px;
+      width: 30px;
+      height: 20px;
+      margin-top: 8px;
+      background: url('../../assets/img/hamburger_gray.png') no-repeat center center;
+      background-size: 100% 100%;
+      margin-right: 15px;
+
+      &.gray {
+        background: url('../../assets/img/hamburger.png') no-repeat center center;
+      }
+    }
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 
 import './style.scss';
@@ -8,6 +7,7 @@ import './style.scss';
 import CreativePeopleImg from '../../assets/img/creative_people.png';
 import UnlimitedBenefitsImg from '../../assets/img/unlimited_benefits.png';
 import WorkRemotelyImg from '../../assets/img/work_remotely.png';
+import Header from '../../components/header';
 function Card(props) {
 	const { title, desc } = props;
 	return (
@@ -87,7 +87,7 @@ function Careers() {
 	];
 	return (
 		<div className="careers-page">
-			<Header2 buttonName="Fast Go" ></Header2>
+			<Header themeType="2" buttonName="Fast Go" ></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					We appreciate <br /> the curious and creative.

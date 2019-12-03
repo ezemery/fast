@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import { FaWhatsapp, FaTwitter, FaLinkedin, FaDribbble, FaInstagram, FaGithub } from 'react-icons/fa';
 
@@ -9,6 +7,7 @@ import './style.scss';
 import FaqsImg from '../../assets/img/faqs.png';
 import LiveChatImg from '../../assets/img/live_chat.png';
 import ContactSupportImg from '../../assets/img/contact_support.png';
+import Header from '../../components/header';
 function Card(props) {
 	const { img, title, desc, action } = props;
 	return (
@@ -47,7 +46,7 @@ function ContactUs() {
 	];
 	return (
 		<div className="contact-us">
-			<Header2 buttonName="Fast Go"></Header2>
+			<Header themeType="2" buttonName="Fast Go"></Header>
 			<div className="section-1">Contact Us</div>
 			<div className="section-2">
 				<div className="section-2-1">You can get in touch we us easily through social media</div>

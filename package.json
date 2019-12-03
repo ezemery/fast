@@ -45,6 +45,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "styled-components": "^4.4.1",
     "swipe": "^1.7.7",
     "swipe-js-iso": "^2.1.5",
     "swiper": "^5.1.0",

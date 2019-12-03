@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 function Footer() {
   const languages = ["US(English)", "UK(English)", "Spanish", "Portuguese"];
   return (
-    <div className={"footer"}>
+    <div className="footer__background">
+    <div className="footer container">
       <div className="footer-col-1">
         <div className="footer-col-1-1">
           <img src={LogoWhite} alt="footer logo"></img>
@@ -180,6 +181,7 @@ function Footer() {
       <div className="chat-button">
         <img src={ChatImg} alt="chat"></img>
       </div>
+    </div>
     </div>
   );
 }

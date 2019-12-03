@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-
-import Header2 from '../../components/header2';
 import Footer from '../../components/footer';
 import Home from './home';
 import Overview from './overview';
 import Menu from './menu';
 
 import './style.scss';
+import Header from '../../components/header';
 
 function Content(props) {
 	const { parent, onMenuClicked } = props;
@@ -23,7 +22,7 @@ function Developers() {
 	const [category, setCategory] = useState({ parent: '', child: '' });
 	return (
 		<div className="developers-page">
-			<Header2 buttonName="Fast Go" hasSubmenu={true}></Header2>
+			<Header themeType="2" buttonName="Fast Go" hasSubmenu={true}></Header>
 			<div className="developers-page-content">
 				<Menu {...category} onMenuClicked={state => setCategory(state)}></Menu>
 				<Content {...category} onMenuClicked={state => setCategory(state)}></Content>

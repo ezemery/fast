@@ -15,6 +15,7 @@ import WarRoom from './pages/warroom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/font/graphik/style.css';
+import NotFoundPage from './pages/404';
 function App() {
 	return (
 		<Router>
@@ -31,6 +32,7 @@ function App() {
 				<Route exact path="/shortcuts" component={Shortcuts} />
 				<Route exact path="/how-it-works" component={HowItWorks} />
 				<Route exact path="/warroom" component={WarRoom} />
+				<Route component={NotFoundPage} />
 			</Switch>
 		</Router>
 	);
