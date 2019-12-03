@@ -30,7 +30,7 @@ function HamburgerMenu(props) {
     <React.Fragment>
       <div className={`hamburger-menu ${show ? 'visible' : ''}`}>
         <div className="hamburger-menu-header">
-          <div className="hamburger-menu-button">Fast Go</div>
+          <div className="hamburger-menu-button">Go Fast</div>
           <div
             className="hamburger-menu-close"
 						onClick={() => {
