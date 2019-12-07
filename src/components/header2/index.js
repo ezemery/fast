@@ -41,8 +41,8 @@ function Header2(props) {
         />
         <div className={type === "gray" ? "header2-menu gray" : "header2-menu"}>
           <Link to="/how-it-works">How It Works</Link>
-          <Link to="/developers">Company</Link>
-          <Link to="/platform">For Business</Link>
+          <Link to="/developers">Developers</Link>
+          <Link to="/platform">Shopify</Link>
           <Link to="/faq">Help</Link>
         </div>
         <div

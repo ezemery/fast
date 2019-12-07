@@ -48,8 +48,8 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
           </Link>
           <div {...(themeType === "1" ? {className: (`header-menu ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "header2-menu gray" : "header2-menu")})}>
             <Link to="/how-it-works">How It Works</Link>
-            <Link to="/developers">Company</Link>
-            <Link to="/platform">For Business</Link>
+            <Link to="/developers">Developers</Link>
+            <Link to="/platform">Shopify</Link>
             <Link to="/faq">Help</Link>
           </div>
           <div {...(themeType === "2" ? {className: (setup ? "header2-button setup" : `header2-button ${type === "gray" ? 'gray' : ''}`)} : {className: (`header-button ${top ? '' : 'white'}`)})}>

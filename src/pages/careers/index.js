@@ -87,7 +87,7 @@ function Careers() {
 	];
 	return (
 		<div className="careers-page">
-			<Header themeType="2" buttonName="Fast Go" ></Header>
+			<Header themeType="2" buttonName="Go Fast" ></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					We appreciate <br /> the curious and creative.
