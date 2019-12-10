@@ -5,7 +5,7 @@ services:
   website:
     build: 
       context: .
-      dockerfile: react.dockerfile
+      dockerfile: Dockerfile
     command: npm start 
     working_dir: /var/www
     #You can change this to live server port
