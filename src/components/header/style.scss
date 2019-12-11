@@ -75,6 +75,7 @@
       text-align: center;
       transition: all 1s ease;
       padding: 13px 35px;
+      font-weight: 700;
       color: #363636;
       border: none !important;
       border-radius: 5px !important;
@@ -96,8 +97,8 @@
     }
 
     &:hover {
-      background: white;
-      color: #363636;
+      // background: white;
+      // color: #363636;
     }
   }
 

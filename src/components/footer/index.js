@@ -54,7 +54,7 @@ function Footer() {
             <Link to="/platform">Business</Link>
           </div>
           <div>
-            <Link to="/dashboard">Developers</Link>
+            <Link to="/developers">Developers</Link>
           </div>
         </div>
         <div className="footer-col-3">
