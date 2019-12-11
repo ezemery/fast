@@ -70,3 +70,13 @@ export const reduceEntity = (entity) => {
       : entity)
   };
 };
+
+export const reduceModules = (modules) => {
+  
+  return modules && modules.reduce((accum, curr) => {
+    if(curr.moduleType) {
+      accum[curr.moduleType]= curr;
+    }
+    return accum
+  }, {})
+}

@@ -43,7 +43,7 @@ function Testimonial(props) {
 						return (
 							<div className="swiper-slide">
 								<div className="testimonial">
-									<div className="testimonial-comment">{comment.comment}</div>
+									<div className="testimonial-comment">{comment.description}</div>
 									<div className="d-flex mt-3">
 										<div className="m-auto d-flex">
 											<div className="testimonial-rating">
@@ -68,7 +68,7 @@ function Testimonial(props) {
 													})}
 												</div>
 											</div>
-											<div className="testimonial-user">{comment.user}</div>
+											<div className="testimonial-user">{comment.author}</div>
 										</div>
 									</div>
 								</div>
@@ -80,10 +80,11 @@ function Testimonial(props) {
 			<div className="mobile-layout">
 				<Swiper {...mobileSwiperParams}>
 					{comments.map(comment => {
+						console.log(comment.author)
 						return (
 							<div className="swiper-slide">
 								<div className="testimonial">
-									<div className="testimonial-comment">{comment.comment}</div>
+									<div className="testimonial-comment">{comment.description}</div>
 									<div className="d-flex mt-3">
 										<div className="m-auto">
 											<div className="testimonial-rating">
@@ -108,7 +109,7 @@ function Testimonial(props) {
 													})}
 												</div>
 											</div>
-											<div className="testimonial-user">{comment.user}</div>
+											<div className="testimonial-user">{comment.author}</div>
 										</div>
 									</div>
 								</div>
