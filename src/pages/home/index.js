@@ -1,69 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { Textfit } from 'react-textfit';
-import Ticker from 'react-ticker';
-import PropTypes from 'prop-types'
-import Header from '../../components/header';
-import Footer from '../../components/footer';
-import Testimonial from '../../components/testimonial';
-import Brand from '../../components/brand';
-import Button from '../../components/button';
-import './style.scss';
-import WaveImg from '../../assets/img/wave.png';
-import Section7Image from '../../assets/img/hero_3.png'
-import GreenWaveImg from '../../assets/img/green_wave.png';
-import AppleImg from '../../assets/img/brand_apple.png';
-import AmazonImg from '../../assets/img/brand_amazon.png';
-import EbayImg from '../../assets/img/brand_ebay.png';
-import IkeaImg from '../../assets/img/brand_ikea.png';
-import TargetImg from '../../assets/img/brand_target.png';
-import Setup1Img from '../../assets/img/setup-1.png';
-import Setup2Img from '../../assets/img/setup-2.png';
-import Setup3Img from '../../assets/img/setup-3.png';
-import SetupArrow1Img from '../../assets/img/setup-arrow1.png';
-import SetupArrow2Img from '../../assets/img/setup-arrow2.png';
-import { selectContentfulModules } from '../../redux/contentful/selectors';
-import { fetchContentfulStartAsync } from '../../redux/contentful/actions';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-function Home({fetchContentful, modules}) {
-	const testimonial = [
-		{
-			comment: '"This is literally the fastest f**cking checkout ever"',
-			user: 'Catrina via Harrisfarm',
-			rating: 3,
-		},
-		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 5 },
-		{ comment: '"This is literally the fastest f**cking checkout ever"', user: 'Catrina - Harris Farm', rating: 4 },
-	];
+import React, { useState, useEffect } from "react";
+import { Textfit } from "react-textfit";
+import Ticker from "react-ticker";
+import PropTypes from "prop-types";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Testimonial from "../../components/testimonial";
+import Brand from "../../components/brand";
+import Button from "../../components/button";
+import "./style.scss";
+import WaveImg from "../../assets/img/wave.png";
+import Section7Image from "../../assets/img/hero_3.png";
+import GreenWaveImg from "../../assets/img/green_wave.png";
+import AppleImg from "../../assets/img/brand_apple.png";
+import AmazonImg from "../../assets/img/brand_amazon.png";
+import EbayImg from "../../assets/img/brand_ebay.png";
+import IkeaImg from "../../assets/img/brand_ikea.png";
+import TargetImg from "../../assets/img/brand_target.png";
+import Setup1Img from "../../assets/img/setup-1.png";
+import Setup2Img from "../../assets/img/setup-2.png";
+import Setup3Img from "../../assets/img/setup-3.png";
+import SetupArrow1Img from "../../assets/img/setup-arrow1.png";
+import SetupArrow2Img from "../../assets/img/setup-arrow2.png";
+import { fetchContentfulStartAsync } from "../../redux/contentful/actions";
+import { connect } from "react-redux";
+import { withModules } from "../../components/shared/modules";
 
-	const brands = [
-		{ name: 'Harris Farm', industry: 'Food' },
-		{ name: '24Hundred', industry: 'Clothing' },
-		{ name: 'Amazon', industry: 'Gadgets' },
-		{ name: 'Fashion Nova', industry: 'Gadgets' },
-		{ name: 'Amazon', industry: 'Gadgets' },
-		{ name: 'Fashion Nova', industry: 'Gadgets' },
-		{ name: '24Hundred', industry: 'Clothing' },
-		{ name: 'Harris Farm', industry: 'Food' },
-	];
+function Home({ fetchContentful, modules }) {
+  console.log("modules", modules)
+  const testimonials = modules && modules.testimonials;
+  const industry = modules && modules.industry.fourColumns;
 
-	const coveredBrands = [
-		IkeaImg,
-		TargetImg,
-		AmazonImg,
-		TargetImg,
-		AmazonImg,
-		EbayImg,
-		AppleImg,
-	];
+  const coveredBrands = [
+    IkeaImg,
+    TargetImg,
+    AmazonImg,
+    TargetImg,
+    AmazonImg,
+    EbayImg,
+    AppleImg
+  ];
 
-	const featureCategories = ['Popular', 'Trending', 'New Arrivals', 'Services', 'Beauty', 'Electronics'];
-  const [currentCategory, setCurrentCategory] = useState('Popular');
-  
+  const featureCategories = [
+    "Popular",
+    "Trending",
+    "New Arrivals",
+    "Services",
+    "Beauty",
+    "Electronics"
+  ];
+  const [currentCategory, setCurrentCategory] = useState("Popular");
+
   useEffect(() => {
-    fetchContentful()
-  },[fetchContentful])
-	return (
+    fetchContentful();
+  }, [fetchContentful]);
+  return (
     <div className="home">
       <Header themeType="1"></Header>
       <div className="section-1">
@@ -86,7 +76,12 @@ function Home({fetchContentful, modules}) {
         </div>
       </div>
       <div className="section-2">
-        <Testimonial className="m-auto" comments={testimonial}></Testimonial>
+        {testimonials && (
+          <Testimonial
+            className="m-auto"
+            comments={testimonials.threeColumns}
+          />
+        )}
       </div>
       <div className="section-3 container">
         <div className="row">
@@ -94,12 +89,12 @@ function Home({fetchContentful, modules}) {
             <h1 className="title">Shop featured brands</h1>
           </div>
           <div className="col-md-8 categories">
-            {featureCategories.map(feature => {
+            {featureCategories.map((feature, indx)=> {
               let className =
-                'category-item-text ' +
-                (feature === currentCategory ? 'active' : '');
+                "category-item-text " +
+                (feature === currentCategory ? "active" : "");
               return (
-                <div className={'category-item'}>
+                <div key={indx} className={"category-item"}>
                   <div
                     className={className}
                     onClick={() => {
@@ -117,7 +112,7 @@ function Home({fetchContentful, modules}) {
           <Textfit mode="single" max={300} className="section-3-background">
             {currentCategory}
           </Textfit>
-          <Brand brands={brands}></Brand>
+          {industry && <Brand brands={industry} indus={industry} />}
         </div>
         <div className="row mt-5 mb-5 mt-xs-3 mt-xs-3 d-flex justify-content-center">
           <div className="see_all_button">See all</div>
@@ -131,14 +126,14 @@ function Home({fetchContentful, modules}) {
               {({ index }) => (
                 <div
                   style={{
-                    height: '30px',
-                    paddingLeft: '30px',
-                    paddingRight: '30px',
+                    height: "30px",
+                    paddingLeft: "30px",
+                    paddingRight: "30px"
                   }}
                 >
                   <img
                     src={coveredBrands[index % coveredBrands.length]}
-                    style={{ height: '30px' }}
+                    style={{ height: "30px" }}
                     alt="brand"
                   ></img>
                 </div>
@@ -148,7 +143,9 @@ function Home({fetchContentful, modules}) {
         </div>
       </div>
       <div className="section-5">
-        <h1 className='section-5-title'>Complete your Purchase in 3 Easy Steps</h1>
+        <h1 className="section-5-title">
+          Complete your Purchase in 3 Easy Steps
+        </h1>
         <div className="section-5-wave">
           <img className="m-auto" src={GreenWaveImg} alt="wave"></img>
         </div>
@@ -222,21 +219,21 @@ function Home({fetchContentful, modules}) {
       <div className="section-7 container">
         <div className="row">
           <div className="col-md-6">
-              <div className="section-7-2">
-                <div className="section-7-2-title">
-                  Safe & <br />
-                  Secure.
-                </div>
-                <div className="section-7-2-desc">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                  quae ab illo inventore veritatis.
-                </div>
-                <div className="section-7-2-footer">
-                  <Button type="green" width={244}>
-                    View security details
-                  </Button>
-                </div>
+            <div className="section-7-2">
+              <div className="section-7-2-title">
+                Safe & <br />
+                Secure.
+              </div>
+              <div className="section-7-2-desc">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis.
+              </div>
+              <div className="section-7-2-footer">
+                <Button type="green" width={244}>
+                  View security details
+                </Button>
+              </div>
             </div>
           </div>
           <div className="col-md-6">
@@ -273,14 +270,11 @@ function Home({fetchContentful, modules}) {
 
 Home.propTypes = {
   fetchContentful: PropTypes.func.isRequired,
-  modules: PropTypes.array.isRequired,
-}
-const mapStateToProps = createStructuredSelector({
-  modules: selectContentfulModules
-});
+  modules: PropTypes.array.isRequired
+};
 
 const mapDispatchToProps = dispatch => ({
-  fetchContentful: () => dispatch(fetchContentfulStartAsync('/index'))
+  fetchContentful: () => dispatch(fetchContentfulStartAsync("/index"))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default withModules(connect(null, mapDispatchToProps)(Home));

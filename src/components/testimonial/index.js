@@ -39,11 +39,11 @@ function Testimonial(props) {
 		<div className="testimonial">
 			<div className="desktop-layout">
 				<Swiper {...desktopSwiperParams}>
-					{comments.map(comment => {
+					{comments.map((comment, indx)=> {
 						return (
-							<div className="swiper-slide">
+							<div className="swiper-slide" key={indx}>
 								<div className="testimonial">
-									<div className="testimonial-comment">{comment.comment}</div>
+									<div className="testimonial-comment">{comment.description}</div>
 									<div className="d-flex mt-3">
 										<div className="m-auto d-flex">
 											<div className="testimonial-rating">
@@ -52,6 +52,7 @@ function Testimonial(props) {
 														if (index < comment.rating)
 															return (
 																<FaStar
+																	key={index}
 																	size={14}
 																	color={'#FFC900'}
 																	className={'ml-1'}
@@ -60,6 +61,7 @@ function Testimonial(props) {
 														else
 															return (
 																<FaStar
+																	key={index}
 																	size={14}
 																	color={'gray'}
 																	className={'ml-1'}
@@ -68,7 +70,7 @@ function Testimonial(props) {
 													})}
 												</div>
 											</div>
-											<div className="testimonial-user">{comment.user}</div>
+											<div className="testimonial-user">{comment.author}</div>
 										</div>
 									</div>
 								</div>
@@ -79,11 +81,12 @@ function Testimonial(props) {
 			</div>
 			<div className="mobile-layout">
 				<Swiper {...mobileSwiperParams}>
-					{comments.map(comment => {
+					{comments.map((comment, indx) => {
+						console.log(comment.author)
 						return (
-							<div className="swiper-slide">
+							<div className="swiper-slide" key={indx}>
 								<div className="testimonial">
-									<div className="testimonial-comment">{comment.comment}</div>
+									<div className="testimonial-comment">{comment.description}</div>
 									<div className="d-flex mt-3">
 										<div className="m-auto">
 											<div className="testimonial-rating">
@@ -92,6 +95,7 @@ function Testimonial(props) {
 														if (index < comment.rating)
 															return (
 																<FaStar
+																	key={index}
 																	size={14}
 																	color={'#FFC900'}
 																	className={'ml-1'}
@@ -100,6 +104,7 @@ function Testimonial(props) {
 														else
 															return (
 																<FaStar
+																	key={index}
 																	size={14}
 																	color={'gray'}
 																	className={'ml-1'}
@@ -108,7 +113,7 @@ function Testimonial(props) {
 													})}
 												</div>
 											</div>
-											<div className="testimonial-user">{comment.user}</div>
+											<div className="testimonial-user">{comment.author}</div>
 										</div>
 									</div>
 								</div>
