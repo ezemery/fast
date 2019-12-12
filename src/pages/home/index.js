@@ -26,6 +26,7 @@ import { connect } from "react-redux";
 import { withModules } from "../../components/shared/modules";
 
 function Home({ fetchContentful, modules }) {
+  console.log("modules", modules)
   const testimonials = modules && modules.testimonials;
   const industry = modules && modules.industry.fourColumns;
 
