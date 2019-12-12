@@ -50,9 +50,9 @@ function Brand(props) {
     <div className="brand-panel">
       <div className="mobile-layout">
         <Swiper {...swiperParams}>
-          {brands.map(brand => {
+          {brands.map((brand, indx) => {
             return (
-              <div className="swiper-slide">
+              <div key={indx} className="swiper-slide">
                 <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
               </div>
             );
@@ -61,9 +61,9 @@ function Brand(props) {
         <div className="swiper-pagination"></div>
       </div>
       <div className="desktop-layout row">
-        {brands.map(brand => {
+        {brands.map((brand,indx) => {
           return (
-            <div className="col-md-3">
+            <div key={indx} className="col-md-3">
               <BrandItem {...brandStyles[brand.name]} {...brand}></BrandItem>
             </div>
           );

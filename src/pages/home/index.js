@@ -88,12 +88,12 @@ function Home({ fetchContentful, modules }) {
             <h1 className="title">Shop featured brands</h1>
           </div>
           <div className="col-md-8 categories">
-            {featureCategories.map(feature => {
+            {featureCategories.map((feature, indx)=> {
               let className =
                 "category-item-text " +
                 (feature === currentCategory ? "active" : "");
               return (
-                <div className={"category-item"}>
+                <div key={indx} className={"category-item"}>
                   <div
                     className={className}
                     onClick={() => {
