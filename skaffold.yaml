@@ -1,0 +1,14 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: gcr.io/fast-gke/new-website
+    #  jib: {}
+    # Use Jib if you don't have dockerfile.
+metadata:
+  name: new-website
+deploy:
+  kubectl:
+    manifests:
+    - k8s-deployment.yml
+    - k8s-service.yml

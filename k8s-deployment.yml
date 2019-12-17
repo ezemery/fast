@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: new-website
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: new-website
+  template: 
+    metadata:
+      labels:
+        app: new-website
+    spec:   
+      containers: 
+      - name: new-website
+        image: gcr.io/fast-gke/new-website:1.1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
