@@ -2,16 +2,9 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: gcr.io/fast-gke/new-website:latest
+  - image: gcr.io/fast-gke/new-website
     #  jib: {}
     # Use Jib if you don't have dockerfile.
-      context: backend
-      sync:
-      manual:
-      # Sync all the javascript files that are in the src folder
-      # with the container src folder
-      - src: 'src/**/*.js'
-        dest: .
 metadata:
   name: new-website
 deploy:
