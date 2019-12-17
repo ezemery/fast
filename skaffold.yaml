@@ -2,9 +2,16 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: gcr.io/fast-gke/new-website
+    - image: gcr.io/fast-gke/new-website:latest
     #  jib: {}
     # Use Jib if you don't have dockerfile.
+      context: backend
+      sync:
+      manual:
+      # Sync all the javascript files that are in the src folder
+      # with the container src folder
+      - src: 'src/**/*.js'
+        dest: .
 metadata:
   name: new-website
 deploy:
@@ -12,3 +19,7 @@ deploy:
     manifests:
     - k8s-deployment.yml
     - k8s-service.yml
+profiles:
+   - name: cloud-build
+     build:
+       googleCloudBuild: {} 
