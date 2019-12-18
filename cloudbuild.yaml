@@ -8,10 +8,10 @@ steps:
   args: ['run', 'test:unit']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/sample', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/new-website', '.']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
 
-images: [gcr.io/$PROJECT_ID/sample']  
+images: [gcr.io/$PROJECT_ID/new-website']  
 timeout: "1600s"
