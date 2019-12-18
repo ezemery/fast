@@ -37,6 +37,45 @@
     display: flex;
     margin: auto;
 
+    .dropdown{
+      margin-right: 60px;
+      cursor: pointer;
+      color: white;
+
+      &.white {
+        .dropdown-toggle{
+            color: #363636;
+    
+            &:hover {
+              color: #7cb342;
+            }
+        }
+      }
+
+      .dropdown-toggle{
+          font-weight: 500;
+          padding-top: 0px;
+          cursor: pointer;
+          color: white;
+
+          &:hover {
+            text-decoration: none;
+            color: #363636;
+          }
+          &:focus {
+            border: none;
+            box-shadow: none;
+          }
+      }
+
+      .dropdown-menu{
+        border: none;
+        a{
+          color: #363636;
+        }
+      }
+    }
+
     a {
       margin-right: 60px;
       cursor: pointer;
@@ -47,6 +86,7 @@
         color: #363636;
       }
     }
+
 
     a:last-child {
       margin-right: 0;
@@ -251,6 +291,40 @@
 
     a:last-child {
       margin-right: 0;
+    }
+
+
+    .dropdown{
+      margin-right: 60px;
+      cursor: pointer;
+      color: white;
+        &.gray{
+          .dropdown-toggle{
+            color: white;
+        }
+      }
+
+      .dropdown-toggle{
+        font-weight: 500;
+        padding-top: 0px;
+        cursor: pointer;
+        color: #363636;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
+    }
+    .dropdown-menu{
+      border: none;
+        a{
+          color: #363636;
+        }
+      }
+
     }
 
     &.gray {

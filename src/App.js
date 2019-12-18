@@ -14,6 +14,7 @@ import HowItWorks from './pages/howitworks';
 import WarRoom from './pages/warroom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import './assets/font/graphik/style.css';
 import NotFoundPage from './pages/404';
 function App() {
