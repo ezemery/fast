@@ -49,7 +49,25 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
           <div {...(themeType === "1" ? {className: (`header-menu ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "header2-menu gray" : "header2-menu")})}>
             <Link to="/how-it-works">How It Works</Link>
             <Link to="/developers">Developers</Link>
-            <Link to="/platform">Shopify</Link>
+            <div {...(themeType === "1" ? {className: (`dropdown ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "dropdown gray" : "dropdown")})}>
+              <button className="btn dropdown-toggle" type="button" id="dropdownCompanyButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Company
+              </button>
+              <div className="dropdown-menu" aria-labelledby="dropdownCompanyButton">
+                <Link className="dropdown-item" to="/about-us">About Us</Link>
+                <Link className="dropdown-item" to="/careers">Careers</Link>
+                <Link className="dropdown-item" to="/how-it-works">How it works</Link>
+              </div>
+            </div>
+            <div {...(themeType === "1" ? {className: (`dropdown ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "dropdown gray" : "dropdown")})}>
+              <button className="btn dropdown-toggle" type="button" id="dropdownPlatformButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Platform
+              </button>
+              <div className="dropdown-menu" aria-labelledby="dropdownPlatformButton">
+                <Link className="dropdown-item" to="/platform">Shopify</Link>
+              </div>
+            </div>
+            
             <Link to="/faq">Help</Link>
           </div>
           <div {...(themeType === "2" ? {className: (setup ? "header2-button setup" : `header2-button ${type === "gray" ? 'gray' : ''}`)} : {className: (`header-button ${top ? '' : 'white'}`)})}>

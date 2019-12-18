@@ -5,6 +5,10 @@ services:
   website:
     build: .
     #You can change this to live server port
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
     ports:
       - 3000:5000
       - 8080:5000
+
