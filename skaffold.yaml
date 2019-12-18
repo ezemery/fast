@@ -5,8 +5,8 @@ build:
   - image: gcr.io/fast-gke/new-website
     #  jib: {}
     # Use Jib if you don't have dockerfile.
-metadata:
-  name: new-website
+#metadata:
+#  name: new-website
 deploy:
   kubectl:
     manifests:
