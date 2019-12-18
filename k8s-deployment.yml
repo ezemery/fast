@@ -14,7 +14,7 @@ spec:
     spec:   
       containers: 
       - name: new-website
-        image: gcr.io/fast-gke/new-website:1.6
+        image: gcr.io/fast-gke/new-website:1.7
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
