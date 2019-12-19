@@ -52,7 +52,7 @@ function HowItWorks() {
 
 	return (
 		<div className="howitworks-page">
-			<Header themeType="2" buttonName="Fast Go" setup={true}></Header>
+			<Header themeType="2" buttonName="Go Fast" setup={true}></Header>
 			<div className="banner">
 				<div className="banner-title">
 					Here's how to shop <br /> with Fast

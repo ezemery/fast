@@ -6,7 +6,6 @@
   display: flex;
   width: 100%;
   z-index: 99;
-  position: fixed;
   font-family: 'Graphik';
 
   &.white {
@@ -117,6 +116,7 @@
       padding: 13px 35px;
       font-weight: 700;
       color: #363636;
+      background-color: #fff;
       border: none !important;
       border-radius: 5px !important;
     }
@@ -338,6 +338,7 @@
     margin-left: auto;
     display: flex;
     transition: all 1s ease;
+    margin: auto 0 auto 16px;
     cursor: pointer;
     &.gray {
       button{
@@ -450,13 +451,11 @@
       margin: auto 0px auto 16px;
       width: 30px;
       height: 20px;
-      margin-top: 8px;
-      background: url('../../assets/img/hamburger_gray.png') no-repeat center center;
+      background: url('../../assets/img/hamburger.png') no-repeat center center;
       background-size: 100% 100%;
-      margin-right: 15px;
 
       &.gray {
-        background: url('../../assets/img/hamburger.png') no-repeat center center;
+        background: url('../../assets/img/hamburger_gray.png') no-repeat center center;
       }
     }
   }

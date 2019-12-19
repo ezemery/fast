@@ -2,25 +2,26 @@ import React, {useState} from 'react';
 import { MdClose, MdExpandMore } from 'react-icons/md';
 import { Menu, Icon } from 'antd';
 import { takeRight } from 'lodash';
+import { Link} from 'react-router-dom';
 import './style.scss';
 const { SubMenu } = Menu;
 
 function HamburgerMenu(props) {
 	let { show, hide } = props;
 	const items = [
-    { text: 'How It Works', url: '/#', children: [] },
+    { text: 'How It Works', url: '/how-it-works', children: [] },
     {
       text: 'Company',
       url: '/#',
       children: [
-        { text: 'About Us', url: '/#' },
+        { text: 'About Us', url: '/about-us' },
         { text: 'Products', url: '/#' },
-        { text: 'Careers', url: '/#' },
-        { text: 'Brands and Assets', url: '/#' },
+        { text: 'Careers', url: '/careers' },
+        { text: 'Brands and Assets', url: '/assets' },
       ],
     },
-    { text: 'For Business', url: '/#', children: [] },
-    { text: 'Help', url: '/#', children: [] },
+    { text: 'For Business', url: '/platform', children: [] },
+    { text: 'Help', url: '/faq', children: [] },
   ];
 	const [openKeys, setOpenKeys] = useState([]);
 	const onOpenChange = openKeys => {
@@ -58,14 +59,19 @@ function HamburgerMenu(props) {
 										{
 											item.children.map(child => {
 												return (
-                          <Menu.Item key={child.text}>{child.text}</Menu.Item>
+							// <Link to={child.url} key={child.text}>{child.text}</Link>
+                        <Menu.Item key={child.url} >
+							 <Link to={child.url}> {child.text}</Link>
+						</Menu.Item>
                         );
 											})
 										}
 										</SubMenu>
 									;
 								} else {
-									return <Menu.Item key={item.text}>{item.text}</Menu.Item>;
+									return <Menu.Item key={item.url}>
+										 <Link to={item.url}> {item.text}</Link>
+										</Menu.Item>;
 								}								
 							})
 						}
