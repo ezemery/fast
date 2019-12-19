@@ -56,7 +56,8 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
               <div className="dropdown-menu" aria-labelledby="dropdownCompanyButton">
                 <Link className="dropdown-item" to="/about-us">About Us</Link>
                 <Link className="dropdown-item" to="/careers">Careers</Link>
-                <Link className="dropdown-item" to="/how-it-works">How it works</Link>
+                <Link className="dropdown-item" to="/assets">Assets</Link>
+                <Link className="dropdown-item" to="/contactus">Contact Us</Link>
               </div>
             </div>
             <div {...(themeType === "1" ? {className: (`dropdown ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "dropdown gray" : "dropdown")})}>
