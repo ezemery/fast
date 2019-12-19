@@ -94,7 +94,7 @@ function AboutUs() {
 	];
 	return (
 		<div className="aboutus-page">
-			<Header themeType="2" buttonName="Fast Go"></Header>
+			<Header themeType="2" buttonName="Go Fast"></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					Get to know Fast and

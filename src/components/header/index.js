@@ -74,7 +74,7 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
             <button className="m-auto btn-fast">{buttonName}</button>
           </div>
           <div
-            className={`burger-button ${top ? '' : 'white'}`}
+           {...(themeType === "2" ? {className: `burger-button ${top ? 'gray' : 'gray'}` } : {className: `burger-button ${top ? '' : 'white'}`})}
             onClick={() => setShowBurger(true)}
           ></div>
         </div>

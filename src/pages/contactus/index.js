@@ -46,7 +46,7 @@ function ContactUs() {
 	];
 	return (
 		<div className="contact-us">
-			<Header themeType="2" buttonName="Fast Go"></Header>
+			<Header themeType="2" buttonName="Go Fast"></Header>
 			<div className="section-1">Contact Us</div>
 			<div className="section-2">
 				<div className="section-2-1">You can get in touch we us easily through social media</div>

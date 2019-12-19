@@ -80,7 +80,7 @@ function Faq() {
   ];
 	return (
     <div className="faq-page">
-      <Header themeType="2" buttonName="Fast Go" type="gray"></Header>
+      <Header themeType="2" buttonName="Go Fast" type="gray"></Header>
       <div className="section-1">
         <div className="section-1-title">Got Questions?</div>
         <div className="section-1-desc">

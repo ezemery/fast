@@ -22,7 +22,7 @@ function Developers() {
 	const [category, setCategory] = useState({ parent: '', child: '' });
 	return (
 		<div className="developers-page">
-			<Header themeType="2" buttonName="Fast Go" hasSubmenu={true}></Header>
+			<Header themeType="2" buttonName="Go Fast" hasSubmenu={true}></Header>
 			<div className="developers-page-content">
 				<Menu {...category} onMenuClicked={state => setCategory(state)}></Menu>
 				<Content {...category} onMenuClicked={state => setCategory(state)}></Content>

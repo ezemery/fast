@@ -78,7 +78,7 @@ function Platform() {
 	];
 	return (
 		<div className="platform-page">
-			<Header themeType="2" type="gray" buttonName='Fast Go'></Header>
+			<Header themeType="2" type="gray" buttonName='Go Fast'></Header>
 			<div className="section-1">
 				<div className="section-1-title">
 					Fast <span className="green">+</span> Shopify
