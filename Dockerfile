@@ -19,4 +19,4 @@ ENV REACT_APP_PREVIEW_ACCESS_TOKEN=avXcCOgunLvkZgMi6iWW56khJ6aF854tqTRzSRmgHQ8
 ENV REACT_APP_SPACE_ID=jkarnbztf3v4
 RUN yarn global add serve
 RUN npm run-script build
-ENTRYPOINT [ "serve", "-s", "build" ] 
+ENTRYPOINT [ "serve", "build" ] 
