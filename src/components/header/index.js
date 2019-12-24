@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './style.scss';
 import HamburgerMenu from '../hamburgermenu';
+import { Menu, Icon } from 'antd';
+import './style.scss';
 import LogoWhite from '../../assets/img/logo_white.png';
 import GrayLogo from "../../assets/img/logo_gray.png";
 import LogoGray from '../../assets/img/logo_gray.png';
 import { Link } from 'react-router-dom';
 import Logo from '../../pages/assets/logo';
+const { SubMenu } = Menu;
+
 function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast'}) {
   const [top, setTop] = useState(true);
-  const [showBurger, setShowBurger] = useState(false)
-
+  const [showBurger, setShowBurger] = useState(false);
   const creatEvent = {
     eventHandler: () => {
       window.pageYOffset > 0 ? setTop(false) : setTop(true);
@@ -46,31 +48,59 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
               alt="header logo"
             />
           </Link>
+          
+
           <div {...(themeType === "1" ? {className: (`header-menu ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "header2-menu gray" : "header2-menu")})}>
-            <Link to="/how-it-works">How It Works</Link>
-            <Link to="/developers">Developers</Link>
-            <div {...(themeType === "1" ? {className: (`dropdown ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "dropdown gray" : "dropdown")})}>
-              <button className="btn dropdown-toggle" type="button" id="dropdownCompanyButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Company
-              </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownCompanyButton">
-                <Link className="dropdown-item" to="/about-us">About Us</Link>
-                <Link className="dropdown-item" to="/careers">Careers</Link>
-                <Link className="dropdown-item" to="/assets">Assets</Link>
-                <Link className="dropdown-item" to="/contactus">Contact Us</Link>
-              </div>
-            </div>
-            <div {...(themeType === "1" ? {className: (`dropdown ${top ? '' : 'white'}`)}: {className: (type === "gray" ? "dropdown gray" : "dropdown")})}>
-              <button className="btn dropdown-toggle" type="button" id="dropdownPlatformButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Platform
-              </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownPlatformButton">
-                <Link className="dropdown-item" to="/platform">Shopify</Link>
-              </div>
-            </div>
-            
-            <Link to="/faq">Help</Link>
+         
+            <Menu mode="horizontal">
+                  <Menu.Item key="how-it-works">
+                  <Link to="/how-it-works">How It Works</Link>
+                  </Menu.Item>
+                  <Menu.Item key="vevelopers" >
+                  <Link to="/developers">Developers</Link>
+                  </Menu.Item>
+                  <SubMenu
+                    title={
+                      <span className="submenu-title-wrapper">
+                        Company
+                      </span>
+                    }
+                  >
+                    <Menu.ItemGroup>
+                      <Menu.Item key="about-us">
+                      <Link className="dropdown-item" to="/about-us">About Us</Link>
+                      </Menu.Item>
+                      <Menu.Item key="careers">
+                      <Link className="dropdown-item" to="/careers">Careers</Link>
+                      </Menu.Item>
+                      <Menu.Item key="assets">
+                      <Link className="dropdown-item" to="/assets">Assets</Link>
+                      </Menu.Item>
+                      <Menu.Item key="contactus">
+                      <Link className="dropdown-item" to="/contactus">Contact Us</Link>
+                      </Menu.Item>
+                    </Menu.ItemGroup>
+                  </SubMenu>
+                  <SubMenu
+                    title={
+                      <span className="submenu-title-wrapper">
+                        Platform
+                      </span>
+                    }
+                  >
+                    <Menu.ItemGroup >
+                      <Menu.Item key="about-us">
+                      <Link className="dropdown-item" to="/platform">Shopify</Link>
+                      </Menu.Item>
+                    </Menu.ItemGroup>
+                  </SubMenu>
+                  <Menu.Item key="faq">
+                  <Link to="/faq">Help</Link>
+                  </Menu.Item>
+              </Menu>
+          
           </div>
+          
           <div {...(themeType === "2" ? {className: (setup ? "header2-button setup" : `header2-button ${type === "gray" ? 'gray' : ''}`)} : {className: (`header-button ${top ? '' : 'white'}`)})}>
             <button className="m-auto btn-fast">{buttonName}</button>
           </div>

@@ -96,7 +96,6 @@
 
       &-1 {
         width: 383px;
-        width: calc(100% - 960px);
         @media screen and (max-width: 600px) {
           width: 100%;
         }
@@ -127,7 +126,7 @@
       &-2 {
         background: url('../../assets/img/careers_back_2.png') no-repeat center center;
         background-size: cover;
-        width: calc(100% - 960px);
+        width: calc(100% - 800px);
         margin-left: 40px;
 
         @media screen and (max-width: 600px) {
@@ -141,7 +140,7 @@
       &-3 {
         // width: 330px;
         margin-left: 40px;
-        width: calc(100% - 1004px);
+        width: calc(100% - 800px);
         @media screen and (max-width: 600px) {
           width: 100%;
           margin-left: 0;
