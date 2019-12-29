@@ -87,7 +87,7 @@ function Testimonial(props) {
 							<div className="swiper-slide" key={indx}>
 								<div className="testimonial">
 									<div className="testimonial-comment">{comment.description}</div>
-									<div className="d-flex mt-3">
+									<div className="d-flex">
 										<div className="m-auto">
 											<div className="testimonial-rating">
 												<div className="m-auto">
