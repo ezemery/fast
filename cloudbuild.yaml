@@ -14,7 +14,7 @@ steps:
   args:
     - run
     - --filename=k8s-config.yml
-    - --image=gcr.io/fast-gke/new-website.js:$SHORT_SHA
+    - --image=gcr.io/fast-gke/new-website:$SHORT_SHA
     - --location=us-central1
     - --cluster=fast-dev-cluster 
 
