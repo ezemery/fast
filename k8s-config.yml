@@ -4,7 +4,7 @@ metadata:
   name: new-website-certificate
 spec:
   domains:
-    - beta.fast.co
+    - v2.beta.fast.co
 ---
 apiVersion: apps/v1beta1
 kind: Deployment
