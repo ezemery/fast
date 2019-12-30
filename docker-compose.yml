@@ -11,4 +11,10 @@ services:
     ports:
       - 3000:5000
       - 8080:5000
-
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 2
+        delay: 10s

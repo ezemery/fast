@@ -189,7 +189,7 @@ function Home({ fetchContentful, modules }) {
         </div>
         <div className="d-flex justify-content-center setup-fast-row">
           <Button type="green" width={244}>
-            Setup Fast Checkout
+            SETUP FAST
           </Button>
         </div>
       </div>
@@ -205,7 +205,7 @@ function Home({ fetchContentful, modules }) {
           <div className="section-6-footer">
             <div className="d-flex justify-content-center">
               <Button type="green" width={189}>
-                I want to go fast
+                GO FAST
               </Button>
             </div>
             <div className="d-flex justify-content-center">
@@ -225,13 +225,11 @@ function Home({ fetchContentful, modules }) {
                 Secure.
               </div>
               <div className="section-7-2-desc">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis.
+              Safety and security is one of our highest priorities at Fast. Your information is fully encrypted and we are compliant with payments privacy standards.
               </div>
               <div className="section-7-2-footer">
                 <Button type="green" width={244}>
-                  View security details
+                  VIEW SECURITY DETAILS
                 </Button>
               </div>
             </div>
@@ -254,12 +252,12 @@ function Home({ fetchContentful, modules }) {
               <div className="email-input">
                 <input placeholder="Email address"></input>
               </div>
-              <div className="button">Get Link</div>
+              <div className="button">NOTIFY ME</div>
             </div>
-            <div className="section-8-apps">
+            {/* <div className="section-8-apps">
               <div className="appstore"></div>
               <div className="googleplay"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
