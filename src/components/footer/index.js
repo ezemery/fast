@@ -2,6 +2,10 @@ import React from "react";
 import "./style.scss";
 import LogoWhite from "../../assets/img/logo_white.png";
 import ChatImg from "../../assets/img/chat.png";
+import dribbble from "../../assets/img/dribbble.svg";
+import linkedin from "../../assets/img/linkedin.svg";
+import twitter from "../../assets/img/twitter.svg";
+import github from "../../assets/img/github.svg";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import ReactCountryFlag from "react-country-flag";
@@ -41,129 +45,64 @@ function Footer() {
 
       <div className="desktop-layout">
         <div className="footer-col-2">
-          <div>
-            <Link to="/">Home</Link>
+           <div>
+            <Link to="/developers">Developers</Link>
           </div>
           <div>
             <Link to="/how-it-works">How it works</Link>
           </div>
+        </div>
+        <div className="footer-col-3">
+          <h6>Company</h6>
           <div>
             <Link to="/about-us">About Fast</Link>
           </div>
           <div>
-            <Link to="/platform">Business</Link>
+            <Link to="/careers">Careers</Link>
           </div>
           <div>
-            <Link to="/developers">Developers</Link>
+            <Link to="/assets">Brands and Assets</Link>
           </div>
         </div>
-        <div className="footer-col-3">
+        <div className="footer-col-4">
+          <h6>Help</h6>
           <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/company/fast/"
-            >
-              Linkedin
-            </a>
+            <Link to="/contact-us">Contact Us</Link>
           </div>
           <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/fastdotco"
-            >
-              Twitter
-            </a>
-          </div>
-          <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/fast-af"
-            >
-              Github
-            </a>
+            <Link to="/faq">FAQs</Link>
           </div>
         </div>
       </div>
       <div className="mobile-layout">
         <div className="footer-col-2">
-          <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://dribbble.com/fast"
-            >
-              Dribbble
-            </a>
+         <div>
+            <Link to="/developers">Developers</Link>
           </div>
           <div>
             <Link to="/how-it-works">How it works</Link>
           </div>
           <div>
-            <Link to="about-us">About Fast</Link>
+            <Link to="/contact-us">Contact Us</Link>
           </div>
           <div>
-            <Link to="platform">Business</Link>
-          </div>
-          <div>
-            <Link to="/developers">Developers</Link>
+            <Link to="/faq">FAQs</Link>
           </div>
         </div>
         <div className="footer-col-3">
+          <h6>Company</h6>
           <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/company/fast/"
-            >
-              Linkedin
-            </a>
+            <Link to="/about-us">About Fast</Link>
           </div>
           <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/fastdotco"
-            >
-              Twitter
-            </a>
+            <Link to="/careers">Careers</Link>
           </div>
           <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/fast-af"
-            >
-              Github
-            </a>
+            <Link to="/assets">Brands and Assets</Link>
           </div>
-          <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://dribbble.com/fast"
-            >
-              Dribbble
-            </a>
-          </div>        </div>
-      </div>
-      <div className="mobile-layout">
-        <div className="footer-col-2">
-          <div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://dribbble.com/fast"
-            >
-              Dribbble
-            </a>
-          </div>
-
         </div>
       </div>
-      <div className="footer-col-4">
+      <div className="footer-col-5">
         <div className="subscribe-text">
           <div>
             Subscribe to our weekly newletters to find out about our special
@@ -176,6 +115,12 @@ function Footer() {
             <input placeholder="Email addresses" />
           </div>
           <div className="subscribe-button">Subscribe</div>
+        </div>
+        <div className="social-links">
+          <a href="https://twitter.com/Fast" target="_blank"><img src={twitter} alt="twitter image"></img></a>
+          <a href="" target="_blank"><img src={dribbble} alt="dribbble image"></img></a>
+          <a href="https://www.linkedin.com/company/fast/" target="_blank"><img src={linkedin} alt="linkedin image"></img></a>
+          <a href="https://github.com/fast-af" target="_blank"><img src={github} alt="github image"></img></a>
         </div>
       </div>
       <div className="chat-button">

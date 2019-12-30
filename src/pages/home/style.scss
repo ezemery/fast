@@ -1,5 +1,5 @@
 .home{
-
+  width: 100vw;
   .section-1 {
     height: calc(100vh - 130px);
     background:  linear-gradient(rgb(26, 130, 147) 0%, rgba(182, 220, 226, 0) 100%) center bottom no-repeat;
@@ -10,7 +10,7 @@
     &::after {
       content: '';
       background: url('../../assets/img/hero_1.png') no-repeat center center;
-      width: 100%;
+      width: 100vw;
       height: calc(100vh - 130px);
       background-size: 100%;
       position: absolute;
@@ -183,7 +183,6 @@
       height: 250px;
       text-transform: uppercase;
       padding-top:96px;
-      background: -webkit-linear-gradient(#f6f6f6, white);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: #00000003;
@@ -634,7 +633,7 @@
       height: 53px;
 
       @media screen and (max-width: 600px) {
-        display: none;
+        flex-direction: column;
       }
 
       .email-input {
@@ -650,10 +649,17 @@
           border: none;
           outline: none;
         }
+
+        @media screen and (max-width: 600px) {
+          .email-input{
+            padding: 15px;
+          }
+        }
       }
 
       .button {
         background: #7cb342;
+        font-weight: 600;
         border-radius: 0px 4px 4px 0px;
         color: white;
         text-align: center;
