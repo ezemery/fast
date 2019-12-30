@@ -632,6 +632,10 @@
       display: flex;
       height: 53px;
 
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+
       .email-input {
         background: white;
         border-radius: 4px;
@@ -644,6 +648,12 @@
           width: 240px;
           border: none;
           outline: none;
+        }
+
+        @media screen and (max-width: 600px) {
+          .email-input{
+            padding: 15px;
+          }
         }
       }
 
