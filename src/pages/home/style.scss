@@ -141,6 +141,9 @@
             margin-left: 0;
           }
         }
+        @media screen and (max-width: 768px) and (min-width: 601px){
+          font-size: 14px;
+        }
 
         &-text {
           cursor: pointer;
