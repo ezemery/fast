@@ -83,41 +83,45 @@ function Home({ fetchContentful, modules }) {
           />
         )}
       </div>
-      <div className="section-3 container">
-        <div className="row">
-          <div className="col-md-4 col-sm-12">
-            <h1 className="title">Shop featured brands</h1>
-          </div>
-          <div className="col-md-8 categories">
-            {featureCategories.map((feature, indx)=> {
-              let className =
-                "category-item-text " +
-                (feature === currentCategory ? "active" : "");
-              return (
-                <div key={indx} className={"category-item"}>
-                  <div
-                    className={className}
-                    onClick={() => {
-                      setCurrentCategory(feature);
-                    }}
-                  >
-                    <div>{feature}</div>
+      <div className="section-3 ">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 col-sm-12">
+              <h1 className="title">Shop featured brands</h1>
+            </div>
+            <div className="col-md-8 categories">
+              {featureCategories.map((feature, indx)=> {
+                let className =
+                  "category-item-text " +
+                  (feature === currentCategory ? "active" : "");
+                return (
+                  <div key={indx} className={"category-item"}>
+                    <div
+                      className={className}
+                      onClick={() => {
+                        setCurrentCategory(feature);
+                      }}
+                    >
+                      <div>{feature}</div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+          </div>
+          <div className="row clearfix">
+            <Textfit mode="single" max={300} className="section-3-background">
+              {currentCategory}
+            </Textfit>
+            {industry && <Brand brands={industry} indus={industry} />}
+          </div>
+          <div className="row mt-5 mb-5 mt-xs-3 mt-xs-3 d-flex justify-content-center">
+            <div className="see_all_button">See all</div>
           </div>
         </div>
-        <div className="row clearfix">
-          <Textfit mode="single" max={300} className="section-3-background">
-            {currentCategory}
-          </Textfit>
-          {industry && <Brand brands={industry} indus={industry} />}
-        </div>
-        <div className="row mt-5 mb-5 mt-xs-3 mt-xs-3 d-flex justify-content-center">
-          <div className="see_all_button">See all</div>
-        </div>
+        
       </div>
+
       <div className="section-4">
         <div className="section-4-1">We've got you covered</div>
         <div className="section-4-2">
