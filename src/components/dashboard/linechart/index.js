@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Highcharts from 'highcharts';
 import ReactHighcharts from 'react-highcharts';
-import styled from 'styled-components'
+import './style.scss'
 
 function MultiLineChart() {
 	const options = {

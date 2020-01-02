@@ -23,7 +23,7 @@ import SetupArrow2Img from "../../assets/img/setup-arrow2.png";
 import { fetchContentfulStartAsync } from "../../redux/contentful/actions";
 import { connect } from "react-redux";
 import { withModules } from "../../helpers/modules";
-import './style.scss'
+import './style.scss';
 
 
 function Home({ fetchContentful, modules }) {

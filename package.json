@@ -11,6 +11,7 @@
     "@types/jest": "^24.0.24",
     "@types/node": "^13.1.2",
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "antd": "^3.24.2",
     "axios": "^0.19.0",
@@ -22,6 +23,7 @@
     "d3-scale": "^3.1.0",
     "d3-selection": "^1.4.0",
     "express": "^4.17.1",
+    "file-loader": "^5.0.2",
     "highcharts": "^7.2.0",
     "highcharts-react": "^0.0.3",
     "jquery": "^3.4.1",
@@ -54,6 +56,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.0",
     "semver": "^6.3.0",
     "style-loader": "^1.1.2",
@@ -76,7 +79,7 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "13.x.x"
+    "node": "12.x.x"
   },
   "browserslist": {
     "production": [

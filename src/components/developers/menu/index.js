@@ -1,133 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaWindows, FaMobileAlt, FaStar, FaAlignLeft } from 'react-icons/fa';
 import { Popover, Icon } from 'antd';
-import styled from 'styled-components'
-const MenuStyle = styled.div`
-.developers-menu {
-	background: #f9fafc;
-	border-radius: 10px;
-	width: 286px;
-	height: 444px;
-	padding: 34px 24px 31px 25px;
-  
-  
-  
-	@media screen and (max-width: 600px) {
-	  display: none;
-	}
-  
-	&-popover {
-	  display: grid;
-	  width: 177px;
-  
-	  &-item {
-		font-family: 'Graphik';
-		font-size: 14px;
-		line-height: 25px;
-		color: #363636;
-		width: 100%;
-		padding: 5px;
-		border-radius: 5px;
-		padding-left: 15px;
-  
-		svg {
-		  margin-right: 15px;
-		}
-  
-		&:hover,
-		&:active {
-		  text-decoration: none;
-		  background: #7cb342;
-		  color: white;
-		}
-	  }
-	}
-  
-	&-mobile {
-	  display: none;
-  
-	  &.scroll {
-		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-	  }
-  
-	  @media screen and (max-width: 600px) {
-		background: #f9fafc;
-		display: block;
-		padding: 0;
-		height: 53px;
-		padding: 15px 25px;
-		position: fixed;
-		width: 100%;
-		top: 75px;
-		z-index: 1;
-		line-height: 16px;
-  
-		.developers-menu-mobile-item {
-		  margin-right: 20px;
-		  color: #363636;
-		  text-decoration: none;
-  
-		  span {
-			vertical-align: middle;
-		  }
-  
-		  &:first-child {
-			color: #8d8d8d;
-		  }
-  
-		  &:after {
-			content: '';
-			position: absolute;
-			background: url('../../../assets/img/menu_mobile_split.png') no-repeat center center;
-			background-size: 100% 100%;
-			width: 11px;
-			height: 26px;
-			margin-left: 3px;
-		  }
-		}
-	  }
-	}
-  
-	&-heading {
-	  font-family: 'Graphik';
-	  font-size: 12px;
-	  line-height: 120%;
-	  color: #88d20f;
-	  margin-bottom: 14px;
-	  padding-left: 18px;
-	}
-  
-	&-item {
-	  padding: 8px 17px;
-	  font-family: 'Graphik';
-	  font-size: 14px;
-	  line-height: 25px;
-	  border-radius: 5px;
-	  width: 100%;
-	  color: #363636;
-	  cursor: pointer;
-  
-	  span {
-		margin-left: 10px;
-	  }
-  
-	  &.active {
-		background: #7cb342;
-		color: white;
-	  }
-  
-	  &:hover {
-		background: #eff2f7;
-		color: #363636;
-	  }
-  
-	  &.child {
-		margin-left: 31px;
-		width: calc(100% - 31px);
-	  }
-	}
-  }
-`;
+import './style.scss'
 
 function Menu(props) {
 	const { parent, child, onMenuClicked } = props;
@@ -230,7 +104,6 @@ function Menu(props) {
 	);
 	return (
     <React.Fragment>
-		<MenuStyle>
       <div className="developers-menu">
         <div className="developers-menu-heading">API DOCS</div>
         <div
@@ -314,7 +187,6 @@ function Menu(props) {
           </a>
         </Popover>
       </div>
-	  </MenuStyle>
     </React.Fragment>
   );
 }

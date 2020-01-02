@@ -1,96 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import Highcharts from 'highcharts';
 import ReactHighcharts from 'react-highcharts'
-
 import axios from 'axios';
-import styled from 'styled-components'
-const ChartStyle = styled.div`
-.warroom-page{
-  font-family: 'Graphik';
-  .chart{
-    background: #FFFFFF;
-    border: 0.5px solid #E5E9F2;
-    box-sizing: border-box;
-    border-radius: 5px;
-    width: 380px;
-    padding-bottom: 20px;
-    @media screen and (max-width: 600px) {
-      width: 273px;
-    }
-    &-heading{
-      padding-top:20px;
-      padding-bottom:20px;
-      border-bottom: 0.5px solid #D3DCE6;
-      @media screen and (max-width: 600px) {
-        padding-top:16px;
-        padding-bottom:16px;
-      }
-      &-value{
-        padding: 5px 23px;
-        background: #F9FAFC;
-        border-radius: 15px;
-        font-size: 14px;
-        line-height: 15px;
-        color: #515151;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    &-values{
-      font-size: 14px;
-      line-height: 15px;
-      color: #515151;
-      @media screen and (max-width: 600px) {
-        font-size:12px;
-      }
-
-      .value{
-        font-size: 34px;
-        line-height: 37px;
-        color: #363636;
-        @media screen and (max-width: 600px) {
-          font-size: 20px;
-        }
-      }
-      .first-line{
-        margin-top: 34px;
-        padding-left:40px;
-        display: flex;
-        padding-right:40px;
-        @media screen and (max-width: 600px) {
-          margin-top: 14px;
-          padding-left:28px;
-          padding-right:28px;
-        }
-      }
-      .second-line{
-        margin-top: 68px;
-        padding-left:40px;
-        display: flex;
-        padding-right:40px;
-        @media screen and (max-width: 600px) {
-          margin-top: 35px;
-          padding-left:28px;
-          padding-right:28px;
-        }
-      }
-      .first-value{
-      }
-      .second-value{
-        margin-left: auto;
-      }
-    }
-    &-diagram{
-      height: 180px;
-      width: 377px;
-      @media screen and (max-width: 600px) {
-        width: 270px;
-      }
-    }
-  }
-}
-`;
+import './style.scss';
 
 function Chart(props) {
   const {today, yesterday, min, secs, monthly, heading} = props;
@@ -224,7 +136,6 @@ function Chart(props) {
     
 
   return (
-  <ChartStyle>
   <div className='chart'>
     <div className='chart-heading'>
       <div className='chart-heading-value'>
@@ -253,7 +164,6 @@ function Chart(props) {
         />
     </div>
   </div>
-  </ChartStyle>
   )
 }
 

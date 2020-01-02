@@ -1,74 +1,5 @@
 import React, { useEffect, createRef, useRef } from 'react';
-import styled from 'styled-components'
-const OverviewStyle = styled.div`
-.developers-overview {
-	margin-left: 80px;
-	padding-top: 20px;
-	@media screen and (max-width: 600px) {
-	  margin-left: 30px;
-	  margin-right: 30px;
-	}
-  
-	&-title {
-	  font-family: 'Graphik';
-	  font-size: 36px;
-	  line-height: 40px;
-	  color: #363636;
-	}
-  
-	&-content {}
-  
-	.section {
-	  display: flex;
-	  border-bottom: 1px solid #e0e6ed;
-	  padding-bottom: 52px;
-	  padding-top: 48px;
-  
-	  @media screen and (max-width: 600px) {
-		display: block;
-	  }
-  
-	  &:last-child {
-		border: none;
-	  }
-  
-	  &-title {
-		font-family: 'Graphik';
-		font-size: 24px;
-		line-height: 26px;
-		color: #88d20f;
-	  }
-  
-	  &-desc {
-		margin-top: 20px;
-		font-family: 'Graphik';
-		font-size: 16px;
-		line-height: 25px;
-		color: #3d3d3d;
-	  }
-  
-	  &-content {
-		max-width: 410px;
-	  }
-  
-	  &-img {
-		width: 440px;
-		height: 310px;
-		margin-left: 51px;
-  
-		@media screen and (max-width: 600px) {
-		  margin-left: 0px;
-		  margin-top: 40px;
-		  width: 100%;
-		}
-  
-		img {
-		  width: 100%;
-		  height: 100%;
-		}
-	  }
-	}
-  }`;
+import './style.scss'
 import scrollToComponent from 'react-scroll-to-component';
 
 import Back1Img from '../../../assets/img/developers_overview_1.png';
@@ -143,7 +74,6 @@ function Overview(props) {
 		}
 	});
 	return (
-		<OverviewStyle>
 		<div className="developers-overview">
 			<div className="developers-overview-title">Overview</div>
 			<div className="developers-overview-content">
@@ -152,7 +82,7 @@ function Overview(props) {
 				})}
 			</div>
 		</div>
-		</OverviewStyle>
+		
 	);
 }
 

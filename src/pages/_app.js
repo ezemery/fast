@@ -8,7 +8,6 @@ import { Provider } from 'react-redux'
 class MyApp extends App {
   render() {
     const { Component, pageProps, reduxStore } = this.props
-    console.log("this.props",this.props);
     return (
       <Provider store={reduxStore}>
         <Component {...pageProps} />

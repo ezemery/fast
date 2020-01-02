@@ -1,115 +1,7 @@
 import React from 'react';
 import {FaArrowUp, FaArrowDown} from 'react-icons/fa';
 import ReactCountryFlag from "react-country-flag";
-import styled from 'styled-components'
-const TableStyle = styled.div`
-.warroom-page{
-  .table{
-    background: #FFFFFF;
-    border: 0.5px solid #E5E9F2;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-family: 'Graphik';
-    text-align: center;
-    width: 512px;
-    @media screen and (max-width: 600px) {
-      width: 100%;
-      
-    }
-
-    &-data{
-      @media screen and (max-width: 600px) {
-        display: flex;
-      }
-    }
-    &-section{
-      @media screen and (max-width: 600px) {
-        width: 50%;
-      }
-    }
-    &-heading{
-      padding-top: 28px;
-      padding-bottom: 20px;
-      border-bottom: 0.5px solid #D3DCE6;
-
-      &-value{
-        font-size: 14px;
-        line-height: 15px;
-        color: #515151;
-        padding: 5px 32px;
-        background: #F9FAFC;
-        border-radius: 10px;
-        width:fit-content;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    &-item{
-      width:128px;
-      padding-top: 17px;
-      padding-bottom: 17px;
-      border-right: 0.5px solid #D3DCE6;
-      border-bottom: 0.5px solid #D3DCE6;
-      @media screen and (max-width: 600px) {
-        width: 50%;
-      }
-      &:nth-child(4n){
-        border-right:none;
-        @media screen and (max-width: 600px) {
-          border-right: 0.5px solid #D3DCE6;
-        }
-      }
-      
-      &-value{
-        font-size: 14px;
-        line-height: 15px;
-        text-align: center;
-        color: #696969;
-      }
-      &-footer{
-        font-size: 10px;
-        line-height: 11px;
-        color: #515151;
-        margin-top: 5px;
-        span{
-          margin-left: 3px;
-          margin-right: 3px;
-        }
-      }
-    }
-    &-title{
-      font-size: 14px;
-      line-height: 15px;
-      text-align: center;
-      color: #7CB342;
-      padding-top: 11px;
-      padding-bottom: 14px;
-      border-bottom: 0.5px solid #D3DCE6;
-      border-right: 0.5px solid #D3DCE6;
-    }
-    &-content{
-      width:512px;
-      display:flex;
-      flex-wrap: wrap;
-      @media screen and (max-width: 600px) {
-        width: 100%;
-      }
-    }
-    .desktop-layout{
-      display:block;
-      @media screen and (max-width: 600px) {
-        display:none;
-      }
-    }
-    .mobile-layout{
-      display:none;
-      @media screen and (max-width: 600px) {
-        display:block;
-      }
-    }
-  }
-}
-`;
+import './style.scss';
 const countryCode={
   UK: 'gb',
   US: 'us',
@@ -154,7 +46,6 @@ function Table(props)
 
 
   return(
-    <TableStyle>
     <div className='table'>
       <div className='table-heading'>
         <div className='table-heading-value'>Around the World </div>
@@ -218,8 +109,6 @@ function Table(props)
       </div>
      
     </div>
-
-    </TableStyle>
   )
 }
 export default Table;

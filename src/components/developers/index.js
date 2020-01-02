@@ -3,24 +3,7 @@ import Footer from '../footer';
 import Home from './home';
 import Overview from './overview';
 import Menu from './menu';
-import styled from 'styled-components'
-const DeveloperStyle = styled.div`
-
-.developers-page {
-	&-content {
-	  overflow: auto;
-	  padding-top: 100px;
-	  display: flex;
-	  justify-content: center;
-	  min-height: calc(100vh - 393px);
-  
-	  @media screen and (max-width: 600px) {
-		display: block;
-		padding-top: 150px;
-	  }
-	}
-  }
-  `;
+import './style.scss'
 import Header from '../../components/header';
 
 function Content(props) {
@@ -37,7 +20,6 @@ function Content(props) {
 function Developers() {
 	const [category, setCategory] = useState({ parent: '', child: '' });
 	return (
-		<DeveloperStyle>
 		<div className="developers-page">
 			<Header themeType="2" buttonName="Go Fast" hasSubmenu={true}></Header>
 			<div className="developers-page-content">
@@ -46,7 +28,6 @@ function Developers() {
 			</div>
 			<Footer></Footer>
 		</div>
-		</DeveloperStyle>
 	);
 }
 

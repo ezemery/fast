@@ -5,10 +5,11 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
-    // static async getInitialProps(ctx) {
-    //     const initialProps = await Document.getInitialProps(ctx)
-    //     return { ...initialProps }
-    //   }
+    static async getInitialProps(ctx) {
+      console.log(ctx)
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+      }
 
   render() {
     return (
@@ -39,7 +40,7 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Fast - Fast.co" />
           <meta name="twitter:site" content="@fastco"/>
-          {/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> */}
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
            {/* <link rel="stylesheet" href="../assets/fonts/style.css"/>
            <link rel="stylesheet" href="../assets/style.css"/> */}
         </Head>

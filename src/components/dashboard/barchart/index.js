@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Highcharts from 'highcharts';
 import ReactHighcharts from 'react-highcharts';
-import styled from 'styled-components'
+import './style.scss';
 import ReactDOM from 'react-dom';
 function StackBarChart() {
 	const options = {
