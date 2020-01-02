@@ -40,6 +40,8 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Fast - Fast.co" />
           <meta name="twitter:site" content="@fastco"/>
           {/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> */}
+           {/* <link rel="stylesheet" href="../assets/fonts/style.css"/>
+           <link rel="stylesheet" href="../assets/style.css"/> */}
         </Head>
         <body>
           <Main />
