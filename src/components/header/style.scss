@@ -415,6 +415,7 @@
   
 
     &.gray {
+      background-color: transparent !important;
       .ant-menu{
         color: white;
         &.ant-menu-horizontal{

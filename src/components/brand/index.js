@@ -3,7 +3,89 @@ import Swiper from "react-id-swiper";
 import AspectRatio from "react-aspect-ratio";
 import "react-aspect-ratio/aspect-ratio.css";
 import "react-id-swiper/lib/styles/css/swiper.css";
-import "./style.scss";
+import styled from 'styled-components'
+const BrandStyle =  styled.div`
+.brand-panel {
+	margin-top: 6px;
+	width: 100%;
+
+	@media screen and (max-width: 600px) {
+		margin-top: 50px;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: #7cb342;
+	}
+
+	.customized-swiper-pagination{
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+	}
+	.swiper-slide {
+		padding: 10px;
+	}
+
+	.brand-item {
+		transition: all 1s ease;
+		margin:2.5rem 1.5rem;
+
+		@media screen and (max-width: 600px) {
+			width: 100%;
+			margin: 0;
+		}
+
+		&-img {
+			border-radius: 10px;
+			display: flex;
+			background-size: 100% 100%;
+		}
+
+		&-name {
+			color: #363636;
+			font-family: Graphik;
+			font-size: 18px;
+			line-height: 25px;
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		&-industry {
+			text-align: center;
+			font-size: 16px;
+			line-height: 18px;
+			color: #c8c8c8;
+		}
+	}
+	.col-md-3{
+		transition: all 1s ease;
+		cursor: pointer;
+		&:hover{
+			background: #FFFFFF;
+			box-shadow: 0px 0px 70px rgba(43, 68, 3, 0.1);
+			border-radius: 10px;
+		}
+	}
+	.brand-item:last-child {
+		
+	}
+}
+
+.mobile-layout {
+	display: none;
+	width: 100%;
+
+	@media screen and (max-width: 600px) {
+		display: block;
+	}
+}
+
+.desktop-layout {
+	@media screen and (max-width: 600px) {
+		display: none !important;
+	}
+}
+`;
 
 function BrandItem(props) {
   const { name, industry, backImg } = props;
@@ -47,6 +129,7 @@ function Brand(props) {
     }
   };
   return (
+    <BrandStyle>
     <div className="brand-panel">
       <div className="mobile-layout">
         <Swiper {...swiperParams}>
@@ -70,6 +153,7 @@ function Brand(props) {
         })}
       </div>
     </div>
+    </BrandStyle>
   );
 }
 

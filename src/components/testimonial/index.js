@@ -5,7 +5,112 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FaStar } from 'react-icons/fa';
 import 'react-id-swiper/lib/styles/css/swiper.css';
-import './style.scss';
+import styled from 'styled-components'
+const TestimonialStyle = styled.div`
+.testimonial {
+	width: 100%;
+
+	.swiper-pagination-bullet-active {
+		background: #7cb342;
+	}
+
+	.swiper-container {
+		width: 100%;
+	}
+
+	.swiper-slide {
+		width: 50%;
+		font-family: 'Graphik';
+		font-size: 24px;
+		line-height: 26px;
+		text-align: center;
+		user-select: none;
+		display: flex;
+		color: #363636;
+
+		&-prev,
+		&-next {
+			opacity: 0.5;
+		}
+
+		&-active {
+			margin: auto;
+		}
+	}
+
+	.testimonial {
+		margin: auto;
+
+		&-rating {
+			display: flex;
+		}
+
+		&-comment {
+			
+			font-family: 'Graphik';
+			font-size: 15px;
+			// line-height: 6px;
+			font-weight: 500;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width: 600px) {
+				font-size: 12px;
+				line-height: 15px;
+				width: 200px;
+			}
+		}
+
+		&-user {
+			margin-left: 16px;
+			font-family: 'Graphik';
+			font-size: 16px;
+			line-height: 26px;
+			text-align: center;
+
+			@media screen and (max-width: 600px) {
+				font-size: 14px;
+				line-height: 25px;
+			}
+		}
+	}
+
+	.mobile-layout {
+		justify-content: center;
+		display: flex;
+		display: none;
+	}
+
+	.desktop-layout {
+		justify-content: center;
+		display: flex;
+		height: 100%;
+	}
+
+	@media screen and (max-width: 600px) {
+		.mobile-layout {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			display: flex;
+		}
+
+		.swiper-slide {
+			width: 100%;
+		}
+
+		.swiper-wrapper {
+			left: 0;
+		}
+
+		.desktop-layout {
+			display: none;
+		}
+	}
+}
+
+`;
 function Testimonial(props) {
 	let { comments } = props;
 	const desktopSwiperParams = {
@@ -36,6 +141,7 @@ function Testimonial(props) {
 		visibilityFullFit: true,
 	};
 	return (
+		<TestimonialStyle>
 		<div className="testimonial">
 			<div className="desktop-layout">
 				<Swiper {...desktopSwiperParams}>
@@ -82,7 +188,6 @@ function Testimonial(props) {
 			<div className="mobile-layout">
 				<Swiper {...mobileSwiperParams}>
 					{comments.map((comment, indx) => {
-						console.log(comment.author)
 						return (
 							<div className="swiper-slide" key={indx}>
 								<div className="testimonial">
@@ -123,6 +228,7 @@ function Testimonial(props) {
 				</Swiper>
 			</div>
 		</div>
+	</TestimonialStyle>
 	);
 }
 

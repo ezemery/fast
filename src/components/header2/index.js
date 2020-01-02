@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./style.scss";
+import styled from 'styled-components'
 import Logo from "../../assets/img/logo_white.png";
 import GrayLogo from "../../assets/img/logo_gray.png";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 
 function Header2(props) {
   let { type, buttonName, hasSubmenu, setup } = props;
@@ -40,10 +40,10 @@ function Header2(props) {
           alt="gray logo"
         />
         <div className={type === "gray" ? "header2-menu gray" : "header2-menu"}>
-          <Link to="/how-it-works">How It Works</Link>
-          <Link to="/developers">Developers</Link>
-          <Link to="/platform">Shopify</Link>
-          <Link to="/faq">Help</Link>
+          <Link href="/how-it-works">How It Works</Link>
+          <Link href="/developers">Developers</Link>
+          <Link href="/platform">Shopify</Link>
+          <Link href="/faq">Help</Link>
         </div>
         <div
           className={setup ? "header2-button setup" : "header2-button"}
