@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass')
 const withCSS = require("@zeit/next-css");
-const withLess = require('@zeit/next-less')
+const withLess = require('@zeit/next-less');
+const webpack = require('webpack');
 
 //const withBundleAnalyzer = require('@next/bundle-analyzer');
 module.exports = withLess(withSass(withCSS({
@@ -15,12 +16,15 @@ module.exports = withLess(withSass(withCSS({
       generateEtags: false,
       //enabled: process.env.ANALYZE === 'true',
 
-      webpack(config) {
-           config.node = {
-                net: "empty",
-                fs: "empty",
-                tls: "empty"
-            };
+      webpack(config, { dev }) {
+        config.plugins.push(
+            new webpack.ProvidePlugin({
+                '$': 'jquery',
+                'jQuery': 'jquery',
+                'window.jQuery': 'jquery',
+                'jquery': 'jquery',
+            })
+        )
         config.module.rules.push({
             test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
             use: {
