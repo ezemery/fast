@@ -162,7 +162,7 @@ function Home({ fetchContentful, modules }) {
             </div>
             <h3 className="setup-title">Setup Fast Checkout</h3>
             <p className="setup-desc">
-            Fill out your payment information just once, and Fast will securely store it for future purchases. <br /> 
+            Fill out your payment information <br /> just once,  and Fast will securely <br /> store it for future purchases.  
             </p>
           </div>
           <div className="setup-arrow">
@@ -188,8 +188,7 @@ function Home({ fetchContentful, modules }) {
             </div>
             <h3 className="setup-title">Superfast checkout</h3>
             <p className="setup-desc">
-              Since your info is cookied you dont have <br /> to fill anything.
-              Its as simple as ABC!
+            Since your information is securely stored<br /> with Fast, there's no need to re-enter your<br /> payment information for each purchase.
             </p>
           </div>
         </div>
@@ -279,5 +278,7 @@ Home.propTypes = {
   modules: PropTypes.array.isRequired
 };
 
-export default withModules(connect()(Home));
-// export default Home;
+// const mapDispatchToProps = dispatch => ({
+//   fetchContentful: () => dispatch(fetchContentfulStartAsync("/index"))
+// });
+export default withModules(Home);

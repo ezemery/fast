@@ -22,6 +22,7 @@
     "d3-array": "^2.3.3",
     "d3-scale": "^3.1.0",
     "d3-selection": "^1.4.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "file-loader": "^5.0.2",
     "highcharts": "^7.2.0",
@@ -29,6 +30,7 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "next": "^9.1.6",
+    "next-redux-wrapper": "^4.0.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-aspect-ratio": "^1.0.41",
@@ -79,7 +81,7 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "13.x.x"
+    "node": "12.x.x"
   },
   "browserslist": {
     "production": [
