@@ -62,7 +62,7 @@ function HamburgerMenu(props) {
 												item.children.map(child => {
 													return (
 														<Menu.Item key={child.url}>
-															<Link href={child.url}>{child.text}</Link>
+															<Link href={child.url}><a>{child.text}</a></Link>
 														</Menu.Item>
 														);
 												})
@@ -72,7 +72,7 @@ function HamburgerMenu(props) {
 								} else {
 									return (
 											<Menu.Item key={item.url}>
-												 <Link href={item.url}>{item.text}</Link>
+												 <Link href={item.url}><a>{item.text}</a></Link>
 											</Menu.Item>
 									);
 								}								

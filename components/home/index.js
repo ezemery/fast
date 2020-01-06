@@ -20,8 +20,6 @@ import Setup2Img from "../../static/img/setup-2.png";
 import Setup3Img from "../../static/img/setup-3.png";
 import SetupArrow1Img from "../../static/img/setup-arrow1.png";
 import SetupArrow2Img from "../../static/img/setup-arrow2.png";
-import { fetchContentfulStartAsync } from "../../redux/contentful/actions";
-import { connect } from "react-redux";
 import { withModules } from "../../helpers/modules";
 import './style.scss';
 
@@ -117,9 +115,9 @@ function Home({ fetchContentful, modules }) {
             </Textfit>
             {industry && <Brand brands={industry} indus={industry} />}
           </div>
-          <div className="row mt-5 mb-5 mt-xs-3 mt-xs-3 d-flex justify-content-center">
+         {industry && ( <div className="row mt-5 mb-5 mt-xs-3 mt-xs-3 d-flex justify-content-center">
             <div className="see_all_button">See all</div>
-          </div>
+          </div>)}
         </div>
         
       </div>
@@ -278,7 +276,4 @@ Home.propTypes = {
   modules: PropTypes.array.isRequired
 };
 
-// const mapDispatchToProps = dispatch => ({
-//   fetchContentful: () => dispatch(fetchContentfulStartAsync("/index"))
-// });
 export default withModules(Home);

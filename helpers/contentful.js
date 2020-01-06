@@ -34,7 +34,9 @@ export const getEntries = async (id) => {
       "fields.slug": id,
       include: 10
     });
-    return reduceEntity(res.items[0]);
+    return new Promise(function(resolve) {
+      resolve(reduceEntity(res.items[0]))
+    })
   } catch (error) {
     return error;
   }

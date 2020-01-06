@@ -7,12 +7,13 @@ import './style.scss';
 
 function BrandItem(props) {
   const { name, industry, backImg } = props;
+  console.log(backImg)
   return (
     <div className="brand-item">
       <AspectRatio
         ratio="1"
         className="brand-item-img"
-        style={{ backgroundImage: `url(${backImg})` }}
+        style={{ backgroundImage: `url(http:${backImg})` }}
       ></AspectRatio>
       <div className={"brand-item-name"}>{name}</div>
       <div className={"brand-item-industry"}>{industry}</div>

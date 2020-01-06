@@ -56,10 +56,10 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
          
             <Menu mode="horizontal">
                   <Menu.Item key="how-it-works">
-                  <Link href="/howitworks">How It Works</Link>
+                  <Link href="/howitworks"><a>How It Works</a></Link>
                   </Menu.Item>
                   <Menu.Item key="vevelopers" >
-                  <Link href="/developers">Developers</Link>
+                  <Link href="/developers"><a>Developers</a></Link>
                   </Menu.Item>
                   <SubMenu
                     title={
@@ -70,16 +70,16 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
                   >
                     <Menu.ItemGroup>
                       <Menu.Item key="about-us">
-                      <Link  href="/aboutus">About Us</Link>
+                      <Link  href="/aboutus"><a>About Us</a></Link>
                       </Menu.Item>
                       <Menu.Item key="careers">
-                      <Link  href="/careers">Careers</Link>
+                      <Link  href="/careers"><a>Careers</a></Link>
                       </Menu.Item>
                       <Menu.Item key="assets">
-                      <Link  href="/assets">Assets</Link>
+                      <Link  href="/assets"><a>Assets</a></Link>
                       </Menu.Item>
                       <Menu.Item key="contactus">
-                      <Link  href="/contactus">Contact Us</Link>
+                      <Link  href="/contactus"><a>Contact Us</a></Link>
                       </Menu.Item>
                     </Menu.ItemGroup>
                   </SubMenu>
@@ -92,12 +92,12 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
                   >
                     <Menu.ItemGroup >
                       <Menu.Item key="platform-shopify">
-                      <Link href="/platform-shopify">Shopify</Link>
+                      <Link href="/platform-shopify"><a>Shopify</a></Link>
                       </Menu.Item>
                     </Menu.ItemGroup>
                   </SubMenu>
                   <Menu.Item key="faq">
-                  <Link href="/faq">Help</Link>
+                  <Link href="/faq"><a>Help</a></Link>
                   </Menu.Item>
               </Menu>
           
