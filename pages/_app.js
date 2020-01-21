@@ -10,23 +10,13 @@ import '../static/font/graphik/style.css';
 import '../static/style.css';
 
 
-export default withRedux(initializeStore)(
-  class MyApp extends App {
-    static async getInitialProps({ Component, ctx }) {
-      return {
-        pageProps: Component.getInitialProps
-          ? await Component.getInitialProps(ctx)
-          : {},
-      }
-    }
+const App = props => {
+  const { Component, pageProps, store } = props
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  )
+}
 
-    render() {
-      const { Component, pageProps, store } = this.props
-      return (
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      )
-    }
-  }
-)
+export default withRedux(initializeStore)(App)

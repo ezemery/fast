@@ -10,8 +10,7 @@ import { fetchContentfulStartAsync } from "../redux/contentful/actions";
 
 Index.getInitialProps =  async function({ store }) {
     await store.dispatch(fetchContentfulStartAsync('/index'));
-    console.log("store state",store.getState())
-    // return {  };
+    return {  }
 };
 
 export default Index;
