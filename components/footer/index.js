@@ -112,15 +112,15 @@ function Footer() {
 
         <div className="subscribe-input">
           <div className="subscribe-mail">
-            <input placeholder="Email addresses" />
+            <input placeholder="Email addresses" aria-label="Email Address"/>
           </div>
           <div className="subscribe-button">Subscribe</div>
         </div>
         <div className="social-links">
-          <a href="https://twitter.com/Fast" target="_blank"><img src={twitter} alt="twitter image"></img></a>
-          <a href="" target="_blank"><img src={dribbble} alt="dribbble image"></img></a>
-          <a href="https://www.linkedin.com/company/fast/" target="_blank"><img src={linkedin} alt="linkedin image"></img></a>
-          <a href="https://github.com/fast-af" target="_blank"><img src={github} alt="github image"></img></a>
+          <a href="https://twitter.com/Fast" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter image"></img></a>
+          <a href="" target="_blank" rel="noreferrer"><img src={dribbble} alt="dribbble image"></img></a>
+          <a href="https://www.linkedin.com/company/fast/" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin image"></img></a>
+          <a href="https://github.com/fast-af" target="_blank" rel="noreferrer"><img src={github} alt="github image"></img></a>
         </div>
       </div>
       <div className="chat-button">

@@ -142,7 +142,7 @@ function AboutUs() {
 				</div>
 				<div className="section-5-subscribe">
 					<div className="section-5-subscribe-input">
-						<input placeholder="enter your email address"></input>
+						<input placeholder="enter your email address" aria-label="Email address"></input>
 					</div>
 					<div className="section-5-subscribe-button">Subscribe</div>
 				</div>

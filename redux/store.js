@@ -10,11 +10,10 @@ const bindMiddleware = middleware => {
   return applyMiddleware(...middleware)
 }
 
-export const initializeStore = () => {
+export const initializeStore = (initialState) => {
   return createStore(
-    combineReducers({
-      rootReducer
-    }),
+      rootReducer,
+      initialState,
     bindMiddleware([thunkMiddleware])
   )
 }

@@ -253,7 +253,7 @@ function Home({ fetchContentful, modules }) {
             </div>
             <div className="section-8-input">
               <div className="email-input">
-                <input placeholder="Email address"></input>
+                <input id="email" placeholder="Email address"aria-label="Email Address"></input>
               </div>
               <div className="button">NOTIFY ME</div>
             </div>

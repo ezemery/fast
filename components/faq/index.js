@@ -90,7 +90,7 @@ function Faq() {
           <div className="section-1-button">Ask Questions</div>
         </div>
         <div className="section-1-question">
-          <input placeholder="Search questions"></input>
+          <input placeholder="Search questions" aria-label="Search questions"></input>
         </div>
         <div className="section-1-back-1"></div>
         <div className="section-1-back-2"></div>
@@ -176,13 +176,13 @@ function Faq() {
         <div className="section-5">
           <div className="section-5-heading">Ask your Question</div>
           <div className="section-5-title">
-            <input placeholder="Add Question Title*"></input>
+            <input placeholder="Add Question Title*" aria-label="Question Title"></input>
           </div>
           <div className="section-5-body">
             <textarea placeholder="Add Body here*"></textarea>
           </div>
           <div className="section-5-title">
-            <input placeholder="add relevant Tags here"></input>
+            <input placeholder="add relevant Tags here" aria-label="Relevant tags"></input>
           </div>
           <div className="d-flex justify-content-end">
             <div className="section-5-button">Ask Question</div>

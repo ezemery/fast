@@ -122,7 +122,7 @@ function Shortcuts() {
             </div>
             <div className="section-search">
               <div className="section-search-container">
-                <input placeholder="search shortcuts" />
+                <input placeholder="search shortcuts" aria-label="Shortcuts" />
                 <Icon type="search" />
               </div>
             </div>

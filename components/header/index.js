@@ -40,6 +40,7 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
             background: type === "gray" ? "#363636" : "white",
             color: type === "gray" ? "white" : "#363636"
           }} : {})}>
+
         <div className={`container d-flex ${top ? '' : 'white'}`}>
           <Link href="/">
             <a className="d-flex" style={{margin: 'auto auto auto 0'}}>
@@ -112,6 +113,7 @@ function Header({themeType = "1", hasSubmenu, type, setup, buttonName = 'Go Fast
           ></div>
         </div>
       </div>
+      
       <HamburgerMenu
         show={showBurger}
         hide={() => {

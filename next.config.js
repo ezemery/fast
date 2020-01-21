@@ -17,28 +17,5 @@ module.exports = withLess(withSass(withCSS(withOptimizedImages({
       poweredByHeader: false,
       generateEtags: false,
       //enabled: process.env.ANALYZE === 'true',
-
-      webpack(config, { dev }) {
-        config.plugins.push(
-            new webpack.ProvidePlugin({
-                '$': 'jquery',
-                'jQuery': 'jquery',
-                'window.jQuery': 'jquery',
-                'jquery': 'jquery',
-            })
-        )
-        config.module.rules.push({
-            test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
-            use: {
-              loader: 'url-loader',
-              options: {
-                limit: 100000,
-                name: '[name].[ext]'
-              }
-            }
-          })
-
-        return config
-      }
       
 }))));
