@@ -6668,7 +6668,7 @@ file-entry-cache@^5.0.1:
   dependencies:
     flat-cache "^2.0.1"
 
-file-loader@3.0.1, file-loader@^3.0.1:
+file-loader@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-3.0.1.tgz#f8e0ba0b599918b51adfe45d66d1e771ad560faa"
   integrity sha512-4sNIOXgtH/9WZq4NvlfU3Opn5ynUsqBwSLyM+I7UOwdGigTBYfVVQEwe/msZNX/j4pCJTIM14Fsw66Svo1oVrw==
@@ -6696,11 +6696,6 @@ file-type@5.2.0, file-type@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-5.2.0.tgz#2ddbea7c73ffe36368dfae49dc338c058c2b8ad6"
   integrity sha1-LdvqfHP/42No365J3DOMBYwritY=
-
-file-type@^10.7.0:
-  version "10.11.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-10.11.0.tgz#2961d09e4675b9fb9a3ee6b69e9cd23f43fd1890"
-  integrity sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw==
 
 file-type@^12.0.0:
   version "12.4.2"
@@ -7255,7 +7250,7 @@ globals@^12.1.0:
   dependencies:
     type-fest "^0.8.1"
 
-globby@8.0.2, globby@^8.0.1:
+globby@8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/globby/-/globby-8.0.2.tgz#5697619ccd95c5275dbb2d6faa42087c1a941d8d"
   integrity sha512-yTzMmKygLp8RUpG1Ymu2VXPSJQZjNAZPD4ywgYEaG7e4tBJeUQBO8OpXrf1RCNcEs5alsoJYPAMiIHP0cmeC7w==
@@ -7863,25 +7858,6 @@ imagemin@7.0.1:
     make-dir "^3.0.0"
     p-pipe "^3.0.0"
     replace-ext "^1.0.0"
-
-imagemin@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/imagemin/-/imagemin-6.1.0.tgz#62508b465728fea36c03cdc07d915fe2d8cf9e13"
-  integrity sha512-8ryJBL1CN5uSHpiBMX0rJw79C9F9aJqMnjGnrd/1CafegpNuA81RBAAru/jQQEOWlOJJlpRnlcVFF6wq+Ist0A==
-  dependencies:
-    file-type "^10.7.0"
-    globby "^8.0.1"
-    make-dir "^1.0.0"
-    p-pipe "^1.1.0"
-    pify "^4.0.1"
-    replace-ext "^1.0.0"
-
-img-loader@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/img-loader/-/img-loader-3.0.1.tgz#c279691c0a9e6b94fa7d8318d2a6596d98bcee78"
-  integrity sha512-0jDJqexgzOuq3zlXwFTBKJlMcaP1uXyl5t4Qu6b1IgXb3IwBDjPfVylBC8vHFIIESDw/S+5QkBbtBrt4T8wESA==
-  dependencies:
-    loader-utils "^1.1.0"
 
 immer@1.10.0:
   version "1.10.0"
@@ -9868,7 +9844,7 @@ mime@1.6.0, mime@^1.3.4:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
-mime@^2.0.3, mime@^2.4.2, mime@^2.4.4:
+mime@^2.4.2, mime@^2.4.4:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
   integrity sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
@@ -10128,19 +10104,6 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
-
-next-optimized-images@^2.5.4:
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.4.tgz#afc2812efd34901ebb0a8b18e21a5989b385cfe5"
-  integrity sha512-Vv/1NM1oeBm7ry2bfUzhqDtd5kHEuluEX0E6pdguVqrWIxa5WJzX4JwWlUR7OxD3BECa5uA13C0XkCtjG1Sdtg==
-  dependencies:
-    chalk "^2.4.2"
-    figures "^3.0.0"
-    file-loader "^3.0.1"
-    imagemin "^6.1.0"
-    img-loader "^3.0.1"
-    raw-loader "^2.0.0"
-    url-loader "^1.1.2"
 
 next-redux-wrapper@^4.0.1:
   version "4.0.1"
@@ -10852,11 +10815,6 @@ p-map@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
   integrity sha512-r6zKACMNhjPJMTl8KcFH4li//gkrXWfbD6feV8l6doRHlzljFWGJ2AP6iKaCJXyZmAUMOPtvbW7EXkbWO/pLEA==
-
-p-pipe@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/p-pipe/-/p-pipe-1.2.0.tgz#4b1a11399a11520a67790ee5a0c1d5881d6befe9"
-  integrity sha1-SxoROZoRUgpneQ7loMHViB1r7+k=
 
 p-pipe@^3.0.0:
   version "3.0.0"
@@ -12367,14 +12325,6 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
-
-raw-loader@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-2.0.0.tgz#e2813d9e1e3f80d1bbade5ad082e809679e20c26"
-  integrity sha512-kZnO5MoIyrojfrPWqrhFNLZemIAX8edMOCp++yC5RKxzFB3m92DqKNhKlU6+FvpOhWtvyh3jOaD7J6/9tpdIKg==
-  dependencies:
-    loader-utils "^1.1.0"
-    schema-utils "^1.0.0"
 
 rc-align@^2.4.0, rc-align@^2.4.1:
   version "2.4.5"
@@ -15460,15 +15410,6 @@ url-loader@2.1.0:
     loader-utils "^1.2.3"
     mime "^2.4.4"
     schema-utils "^2.0.0"
-
-url-loader@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-1.1.2.tgz#b971d191b83af693c5e3fea4064be9e1f2d7f8d8"
-  integrity sha512-dXHkKmw8FhPqu8asTc1puBfe3TehOCo2+RmOOev5suNCIYBcT626kxiWg1NBVkwc4rO8BGa7gP70W7VXuqHrjg==
-  dependencies:
-    loader-utils "^1.1.0"
-    mime "^2.0.3"
-    schema-utils "^1.0.0"
 
 url-loader@^3.0.0:
   version "3.0.0"
