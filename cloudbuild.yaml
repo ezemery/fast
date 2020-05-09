@@ -1,0 +1,20 @@
+# gcloud builds submit . --config=cloudbuild.yaml
+
+steps:
+# builds the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/fast-gke/new-website:$SHORT_SHA', '.']
+  
+# push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/fast-gke/new-website:$SHORT_SHA"]
+  
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy:stable"
+  args:
+    - run
+    - --filename=k8s-config.yml
+    - --image=gcr.io/fast-gke/new-website:$SHORT_SHA
+    - --location=us-central1
+    - --cluster=fast-dev-cluster 
+
