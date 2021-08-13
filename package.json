@@ -29,7 +29,7 @@
     "highcharts-react": "^0.0.3",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
-    "next": "^9.1.6",
+    "next": "^11.1.0",
     "next-redux-wrapper": "^4.0.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
